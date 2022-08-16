@@ -1,0 +1,103 @@
+version: '2'
+services:
+    db:
+        image: 'mariadb'
+        command: "mysqld --skip-innodb --default-storage-engine=myisam" 
+        environment:
+          - "MYSQL_ROOT_PASSWORD=lHhYoy"   
+        container_name: db 
+        volumes:     
+            - ./mysql/db:/var/lib/mysql/
+            - ./mysql/logs/mariadb-slow.log:/var/log/mysql/mariadb-slow.log
+            - ./mysql/my.cnf:/etc/mysql/my.cnf
+            - ./dump:/dump
+            - /etc/localtime:/etc/localtime  
+        logging:
+            driver: none
+        restart: always
+    mail:
+        image : 'mwader/postfix-relay' 
+        environment: 
+            - "POSTFIX_myhostname=mail.yourfish.ru" 
+            - "POSTFIX_mydestination="   
+            - "POSTFIX_minimal_backoff_time=300s"
+            - "POSTFIX_maximal_backoff_time=900s"
+            - "POSTFIX_maximal_queue_lifetime=900s" 
+            - "OPENDKIM_DOMAINS=mail.yourfish.ru"
+            - "POSTFIX_mynetworks=80.78.250.92,127.0.0.0/8,10.0.0.0/8,172.16.0.0/12,192.168.0.0/16,62.213.67.24/24,185.240.103.220/220"
+        restart: always
+        ports: 
+            - "250:25" 
+        logging:
+            driver: none
+        volumes:     
+            - /etc/opendkim/keys/:/etc/opendkim/keys/
+            - /etc/localtime:/etc/localtime  
+            - ./mail/postfix:/var/spool/postfix
+        container_name: mail 
+    phpmyadmin:
+        image: 'phpmyadmin/phpmyadmin:4.7'  
+        command: "phpmyadmin"  
+        links:
+            - db  
+        ports: 
+            - "8083:80" 
+        logging:
+            driver: none
+        volumes:
+            - /etc/localtime:/etc/localtime 
+        environment: 
+            - "MYSQL_USERNAME=root"
+            - "MYSQL_ROOT_PASSWORD=lHhYoy"  
+        container_name: phpmyadmin
+        restart: always
+    apache: 
+        image: 'powernic/apache:php-5.3-test' 
+        links:
+            - db
+        volumes:
+            - ./apache/conf/apache2.conf:/etc/apache2/apache2.conf
+            - './apache/conf.d:/etc/apache2/sites-enabled'
+            - './apache/log:/var/log/apache2' 
+            - '/tmp:/tmp' 
+            - ./volumes/www:/var/www/html/
+            - ./apache/php.ini:/usr/local/etc/php/php.ini   
+            - ./apache/user:/var/www/user
+            - /etc/localtime:/etc/localtime 
+        logging:
+            driver: none
+        restart: always
+        container_name: apache   
+    nginx:
+        image: 'powernic/nginx-pagespeed:latest'   
+        environment:
+            - "DOMAIN=yourfish.ru"
+            - "WEBROOT=/var/www/html/yourfish.ru"
+            - "GIT_EMAIL=powernic@list.ru"
+        volumes: 
+            - ./nginx/virtualhost:/etc/nginx/sites-enabled
+            - ./nginx/nginx.conf:/etc/nginx/nginx.conf 
+            - ./volumes/www:/var/www/html
+            - ./temp:/var/cache/nginx/client_temp  
+            - /etc/letsencrypt:/etc/letsencrypt 
+            - /etc/localtime:/etc/localtime 
+        #    - .id_private:/root/.ssh/id_rsa
+        links:
+            - phpmyadmin
+        logging:
+            driver: none
+        ports:
+            - "80:80"
+            - "443:443" 
+        container_name: nginx     
+        restart: always     
+    #tsung:
+    #    image : 'witrdotnet/docker-tsung'  
+    #    links:
+    #        - nginx 
+    #    volumes: 
+    #        - ./tsung:/.tsung
+    #    ports:
+    #        - "8091:8091" 
+    #    container_name: tsung 
+        

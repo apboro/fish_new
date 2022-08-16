@@ -1,0 +1,8 @@
+{
+    "require": {
+        "yandex-market/yandex-market-php-partner": "*",
+        "cdek-it/sdk2.0":"^0.1.5",
+         "php-http/zend-adapter":"*",
+        "symfony/http-client": "^4.4"
+    }
+    }

@@ -1,0 +1,2 @@
+
+<iframe src="https://www.vsemayki.ru/" style="width: 100%;" frameborder=0 marginheight=0 marginwidth=0 onload="o=this.contentWindow.document.body; this.style.height=o.scrollHeight; this.style.height=o.scrollHeight-o.clientHeight+o.offsetHeight;"></iframe>

@@ -1,0 +1,85 @@
+<?php
+
+define('TABLE_HEADING_CONFIGURATION_TITLE', 'Опция');
+define('TABLE_HEADING_CONFIGURATION_VALUE', 'Значение');
+define('TABLE_HEADING_ACTION', 'Действие');
+
+define('TEXT_INFO_EDIT_INTRO', 'Внесите необходимые изменения');
+define('TEXT_INFO_DATE_ADDED', 'Дата добавления:');
+define('TEXT_INFO_LAST_MODIFIED', 'Последние изменения:');
+
+define('MAX_DISPLAY_NEWSDESK_SEARCH_RESULTS_TITLE', 'Новостей на одной странице');
+define('MAX_DISPLAY_NEWSDESK_PAGE_LINKS_TITLE', 'Ссылок на страницы');
+define('NEWSDESK_ARTICLE_NAME_TITLE', 'Показывать поле заголовок');
+define('NEWSDESK_ARTICLE_SHORTTEXT_TITLE', 'Показывать поле кратко');
+define('NEWSDESK_ARTICLE_DESCRIPTION_TITLE', 'Показывать поле содержание');
+define('NEWSDESK_DATE_AVAILABLE_TITLE', 'Показывать дату');
+define('NEWSDESK_ARTICLE_URL_TITLE', 'Показывать URL ссылку');
+define('NEWSDESK_STATUS_TITLE', 'Показывать статус');
+define('NEWSDESK_IMAGE_TITLE', 'Показывать картинку');
+define('NEWSDESK_IMAGE_TWO_TITLE', 'Показывать картинку 2');
+define('NEWSDESK_IMAGE_THREE_TITLE', 'Показывать картинку 3');
+define('NEWSDESK_PREV_NEXT_BAR_LOCATION_TITLE', 'Расположение навигации Следующая/Предыдущая страница');
+define('MAX_DISPLAY_NEWSDESK_NEWS_TITLE', 'Новостей на главной странице');
+define('LATEST_DISPLAY_NEWSDESK_NEWS_TITLE', 'Новостей в боксе последние новости');
+define('DISPLAY_LATEST_NEWS_BOX_TITLE', 'Показывать бокс последние новости');
+define('DISPLAY_NEWS_CATAGORY_BOX_TITLE', 'Показывать бокс категории новостей');
+define('DISPLAY_NEWSDESK_VIEWCOUNT_TITLE', 'Показывать счётчик просмотров');
+define('DISPLAY_NEWSDESK_READMORE_TITLE', 'Показывать ссылку подробнее');
+define('DISPLAY_NEWSDESK_SUMMARY_TITLE', 'Показывать краткое содержание новости');
+define('DISPLAY_NEWSDESK_HEADLINE_TITLE', 'Показывать заголовок новости');
+define('DISPLAY_NEWSDESK_DATE_TITLE', 'Показывать дату');
+define('DISPLAY_NEWSDESK_IMAGE_TITLE', 'Показывать картинку 1');
+define('DISPLAY_NEWSDESK_IMAGE_TWO_TITLE', 'Показывать картинку 2');
+define('DISPLAY_NEWSDESK_IMAGE_THREE_TITLE', 'Показывать картинку 3');
+define('DISPLAY_NEWSDESK_REVIEWS_TITLE', 'Показывать отзывы');
+define('MAX_DISPLAY_NEW_REVIEWS_TITLE', 'Максимальное количество новых отзывов');
+define('STICKY_ARTICLE_NAME_TITLE', 'Показывать поле заголовок');
+define('STICKY_ARTICLE_SHORTTEXT_TITLE', 'Показывать поле кратко');
+define('STICKY_ARTICLE_DESCRIPTION_TITLE', 'Показывать содержание');
+define('STICKY_NEWSDESK_VIEWCOUNT_TITLE', 'Показывать счётчик просмотров');
+define('STICKY_NEWSDESK_READMORE_TITLE', 'Показывать ссылку подробнее');
+define('STICKY_DATE_ADDED_TITLE', 'Показывать дату');
+define('STICKY_ARTICLE_URL_TITLE', 'Показывать URL ссылку');
+define('STICKY_IMAGE_TITLE', 'Показывать картинку 1');
+define('STICKY_IMAGE_TWO_TITLE', 'Показывать картинку 2');
+define('STICKY_IMAGE_THREE_TITLE', 'Показывать картинку 3');
+
+define('MAX_DISPLAY_NEWSDESK_SEARCH_RESULTS_DESC', 'Сколько новостей показывать на одной странице?');
+define('MAX_DISPLAY_NEWSDESK_PAGE_LINKS_DESC', 'Количество ссылок на другие страницы.');
+define('NEWSDESK_ARTICLE_NAME_DESC', 'Показывать поле заголовок при просмотре новостей? (0=не показывать; 1=показывать)');
+define('NEWSDESK_ARTICLE_SHORTTEXT_DESC', 'Показывать поле кратко при просмотре новостей? (0=не показывать; 1=показывать)');
+define('NEWSDESK_ARTICLE_DESCRIPTION_DESC', 'Показывать поле содержание при просмотре новостей? (0=не показывать; 1=показывать)');
+define('NEWSDESK_DATE_AVAILABLE_DESC', 'Показывать дату при просмотре новостей? (0=не показывать; 1=показывать)');
+define('NEWSDESK_ARTICLE_URL_DESC', 'Показывать URL ссылку при просмотре новостей? (0=не показывать; 1=показывать)');
+define('NEWSDESK_STATUS_DESC', 'Показывать статус при просмотре новостей? (0=не показывать; 1=показывать)');
+define('NEWSDESK_IMAGE_DESC', 'Показывать картинку 1 при просмотре новостей? (0=не показывать; 1=показывать)');
+define('NEWSDESK_IMAGE_TWO_DESC', 'Показывать картинку 2 при просмотре новостей? (0=не показывать; 1=показывать)');
+define('NEWSDESK_IMAGE_THREE_DESC', 'Показывать картинку 3 при просмотре новостей? (0=не показывать; 1=показывать)');
+define('NEWSDESK_PREV_NEXT_BAR_LOCATION_DESC', 'Расположение навигации Следующая/Предыдущая страница<br><br>top - верх<br>bottom - низ<br>both - (верх+низ)');
+define('MAX_DISPLAY_NEWSDESK_NEWS_DESC', 'Сколько новостей показывать на главной странице?');
+define('LATEST_DISPLAY_NEWSDESK_NEWS_DESC', 'Сколько новостей показывать в боксе последние новости?');
+define('DISPLAY_LATEST_NEWS_BOX_DESC', 'Показывать бокс свежие новости? (0=не показывать; 1=показывать)');
+define('DISPLAY_NEWS_CATAGORY_BOX_DESC', 'Показывать бокс категории новостей? (0=не показывать; 1=показывать)');
+define('DISPLAY_NEWSDESK_VIEWCOUNT_DESC', 'Показывать счётчик количества просмотров новостей? (0=не показывать; 1=показывать)');
+define('DISPLAY_NEWSDESK_READMORE_DESC', 'Показывать ссылку подробнее? (0=не показывать; 1=показывать)');
+define('DISPLAY_NEWSDESK_SUMMARY_DESC', 'Показывать краткое содержание новости? (0=не показывать; 1=показывать)');
+define('DISPLAY_NEWSDESK_HEADLINE_DESC', 'Показывать заголовок новости? (0=не показывать; 1=показывать)');
+define('DISPLAY_NEWSDESK_DATE_DESC', 'Показывать дату добавления новости? (0=не показывать; 1=показывать)');
+define('DISPLAY_NEWSDESK_IMAGE_DESC', 'Показывать картинку 1 новости? (0=не показывать; 1=показывать)');
+define('DISPLAY_NEWSDESK_IMAGE_TWO_DESC', 'Показывать картинку 2 новости? (0=не показывать; 1=показывать)');
+define('DISPLAY_NEWSDESK_IMAGE_THREE_DESC', 'Показывать картинку 3 новости? (0=не показывать; 1=показывать)');
+define('DISPLAY_NEWSDESK_REVIEWS_DESC', 'Показывать отзывы? (0=не показывать; 1=показывать)');
+define('MAX_DISPLAY_NEW_REVIEWS_DESC', 'Максимальное количество выводимых новых отзывов.');
+define('STICKY_ARTICLE_NAME_DESC', 'Показывать заголовок новости? (0=не показывать; 1=показывать)');
+define('STICKY_ARTICLE_SHORTTEXT_DESC', 'Показывать поле кратко? (0=не показывать; 1=показывать)');
+define('STICKY_ARTICLE_DESCRIPTION_DESC', 'Показывать содержание новости? (0=не показывать; 1=показывать)');
+define('STICKY_NEWSDESK_VIEWCOUNT_DESC', 'Показывать счётчик просмотров новости? (0=не показывать; 1=показывать)');
+define('STICKY_NEWSDESK_READMORE_DESC', 'Показывать ссылку подробнее? (0=не показывать; 1=показывать)');
+define('STICKY_DATE_ADDED_DESC', 'Показывать дату добавления новости? (0=не показывать; 1=показывать)');
+define('STICKY_ARTICLE_URL_DESC', 'Показывать URL ссылку новости? (0=не показывать; 1=показывать)');
+define('STICKY_IMAGE_DESC', 'Показывать картинку 1 новости? (0=не показывать; 1=показывать)');
+define('STICKY_IMAGE_TWO_DESC', 'Показывать картинку 2 новости? (0=не показывать; 1=показывать)');
+define('STICKY_IMAGE_THREE_DESC', 'Показывать картинку 3 новости? (0=не показывать; 1=показывать)');
+
+?>

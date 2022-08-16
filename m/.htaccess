@@ -1,0 +1,1 @@
+redirect 302 / /index.php?is_mobile=1

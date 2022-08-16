@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/../testfisha" />
+    </include_path>
+  </component>
+  <component name="PhpInterpreters">
+    <interpreters>
+      <interpreter id="935f6394-34d4-479f-babb-339f36a0ec0f" name="kolin nginx s php 7.1.3" home="docker://DATA" debugger_id="php.debugger.XDebug">
+        <remote_data INTERPRETER_PATH="php" HELPERS_PATH="/opt/.phpstorm_helpers" INITIALIZED="false" VALID="true" RUN_AS_ROOT_VIA_SUDO="false" DOCKER_ACCOUNT_NAME="Docker" DOCKER_IMAGE_NAME="powernic/nginx-pagespeed:latest" DOCKER_REMOTE_PROJECT_PATH="/opt/project" />
+      </interpreter>
+    </interpreters>
+  </component>
+  <component name="PhpInterpretersPhpInfoCache">
+    <phpInfoCache>
+      <interpreter name="kolin nginx s php 7.1.3">
+        <phpinfo binary_type="PHP" php_cli="/usr/local/bin/php" path_separator=":" version="7.1.3">
+          <additional_php_ini>/usr/local/etc/php/conf.d/docker-php-ext-exif.ini, /usr/local/etc/php/conf.d/docker-php-ext-gd.ini, /usr/local/etc/php/conf.d/docker-php-ext-intl.ini, /usr/local/etc/php/conf.d/docker-php-ext-mcrypt.ini, /usr/local/etc/php/conf.d/docker-php-ext-mysqli.ini, /usr/local/etc/php/conf.d/docker-php-ext-opcache.ini, /usr/local/etc/php/conf.d/docker-php-ext-pdo_mysql.ini, /usr/local/etc/php/conf.d/docker-php-ext-redis.ini, /usr/local/etc/php/conf.d/docker-php-ext-soap.ini, /usr/local/etc/php/conf.d/docker-php-ext-xsl.ini, /usr/local/etc/php/conf.d/docker-php-ext-zip.ini, /usr/local/etc/php/conf.d/docker-vars.ini</additional_php_ini>
+          <configuration_file />
+          <configuration_options>
+            <configuration_option name="include_path" value=".:/usr/local/lib/php" />
+          </configuration_options>
+          <debuggers />
+          <loaded_extensions>
+            <extension name="Core" />
+            <extension name="PDO" />
+            <extension name="Phar" />
+            <extension name="Reflection" />
+            <extension name="SPL" />
+            <extension name="SimpleXML" />
+            <extension name="Zend OPcache" />
+            <extension name="ctype" />
+            <extension name="curl" />
+            <extension name="date" />
+            <extension name="dom" />
+            <extension name="exif" />
+            <extension name="fileinfo" />
+            <extension name="filter" />
+            <extension name="ftp" />
+            <extension name="gd" />
+            <extension name="hash" />
+            <extension name="iconv" />
+            <extension name="intl" />
+            <extension name="json" />
+            <extension name="libxml" />
+            <extension name="mbstring" />
+            <extension name="mcrypt" />
+            <extension name="mysqli" />
+            <extension name="mysqlnd" />
+            <extension name="openssl" />
+            <extension name="pcre" />
+            <extension name="pdo_mysql" />
+            <extension name="pdo_sqlite" />
+            <extension name="posix" />
+            <extension name="readline" />
+            <extension name="redis" />
+            <extension name="session" />
+            <extension name="soap" />
+            <extension name="sqlite3" />
+            <extension name="standard" />
+            <extension name="tokenizer" />
+            <extension name="xml" />
+            <extension name="xmlreader" />
+            <extension name="xmlwriter" />
+            <extension name="xsl" />
+            <extension name="zip" />
+            <extension name="zlib" />
+          </loaded_extensions>
+        </phpinfo>
+      </interpreter>
+    </phpInfoCache>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.3">
+    <option name="suggestChangeDefaultLanguageLevel" value="false" />
+  </component>
+  <component name="PhpRuntimeConfiguration">
+    <extensions>
+      <extension name="FFI" enabled="true" />
+      <extension name="LuaSandbox" enabled="true" />
+      <extension name="Parle" enabled="true" />
+      <extension name="SaxonC" enabled="true" />
+      <extension name="ZendCache" enabled="true" />
+      <extension name="aerospike" enabled="true" />
+      <extension name="ast" enabled="true" />
+      <extension name="blackfire" enabled="true" />
+      <extension name="com_dotnet" enabled="true" />
+      <extension name="couchbase_v2" enabled="true" />
+      <extension name="crypto" enabled="true" />
+      <extension name="ds" enabled="true" />
+      <extension name="event" enabled="true" />
+      <extension name="expect" enabled="true" />
+      <extension name="leveldb" enabled="true" />
+      <extension name="libvirt-php" enabled="true" />
+      <extension name="lua" enabled="true" />
+      <extension name="lzf" enabled="true" />
+      <extension name="mapscript" enabled="true" />
+      <extension name="meminfo" enabled="true" />
+      <extension name="msgpack" enabled="true" />
+      <extension name="parallel" enabled="true" />
+      <extension name="pcov" enabled="true" />
+      <extension name="phpdbg" enabled="true" />
+      <extension name="pq" enabled="true" />
+      <extension name="radius" enabled="true" />
+      <extension name="rdkafka" enabled="true" />
+      <extension name="rpminfo" enabled="true" />
+      <extension name="solr" enabled="true" />
+      <extension name="stats" enabled="true" />
+      <extension name="stomp" enabled="true" />
+      <extension name="svm" enabled="true" />
+      <extension name="sync" enabled="true" />
+      <extension name="uopz" enabled="true" />
+      <extension name="uuid" enabled="true" />
+      <extension name="uv" enabled="true" />
+      <extension name="winbinder" enabled="true" />
+      <extension name="xcache" enabled="true" />
+      <extension name="xdiff" enabled="true" />
+      <extension name="xxtea" enabled="true" />
+      <extension name="yaf" enabled="true" />
+      <extension name="yar" enabled="true" />
+      <extension name="zookeeper" enabled="true" />
+      <extension name="zstd" enabled="true" />
+    </extensions>
+  </component>
+</project>

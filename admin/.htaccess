@@ -1,0 +1,14 @@
+#<Limit GET POST>
+#	require valid-user
+#</Limit>
+#AuthType Basic
+#AuthName "/www/yourfish.ru/admin"
+#AuthUserFile /var/www/yourfish/data/etc/196904891.passwd
+#AuthType Basic
+#AuthName "/www/yourfish.ru/admin"
+#AuthUserFile /var/www/yourfish/data/etc/1055169.passwd
+#<Limit GET POST>
+#	require valid-user
+#</Limit>
+php_flag display_errors off
+

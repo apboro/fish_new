@@ -1,0 +1,32 @@
+{
+  "status": "OK",
+  "result":
+  {
+    "bids":
+    [
+      {
+        "feedId": 31920,
+        "offerId": "120",
+        "bid": 0.22,
+        "dontPullUpBids": false,
+        "status": "PUBLISHED",
+        "modified": "2018-12-11T14:28:00+03:00"
+      },
+      {
+        "feedId": 31920,
+        "offerId": "122",
+        "dontPullUpBids": false,
+        "modified": "2018-12-11T14:28:00+03:00",
+        "status": "ERROR_OFFER_NOT_FOUND"
+      },
+      {
+        "feedId": 31920,
+        "offerId": "121",
+        "bid": 0.51,
+        "dontPullUpBids": false,
+        "status": "INDEXING",
+        "modified": "2018-12-19T10:33:27+03:00"
+      }
+    ]
+  }
+}

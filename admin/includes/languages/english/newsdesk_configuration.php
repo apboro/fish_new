@@ -1,0 +1,85 @@
+<?php
+
+define('TABLE_HEADING_CONFIGURATION_TITLE', 'Title');
+define('TABLE_HEADING_CONFIGURATION_VALUE', 'Value');
+define('TABLE_HEADING_ACTION', 'Action');
+
+define('TEXT_INFO_EDIT_INTRO', 'Please make any necessary changes');
+define('TEXT_INFO_DATE_ADDED', 'Date Added:');
+define('TEXT_INFO_LAST_MODIFIED', 'Last Modified:');
+
+define('MAX_DISPLAY_NEWSDESK_SEARCH_RESULTS_TITLE', 'Search Results');
+define('MAX_DISPLAY_NEWSDESK_PAGE_LINKS_TITLE', 'Page Links');
+define('NEWSDESK_ARTICLE_NAME_TITLE', 'Display Headline');
+define('NEWSDESK_ARTICLE_SHORTTEXT_TITLE', 'Display Summary');
+define('NEWSDESK_ARTICLE_DESCRIPTION_TITLE', 'Display Content');
+define('NEWSDESK_DATE_AVAILABLE_TITLE', 'Display Date');
+define('NEWSDESK_ARTICLE_URL_TITLE', 'Display URL');
+define('NEWSDESK_STATUS_TITLE', 'Display Status');
+define('NEWSDESK_IMAGE_TITLE', 'Display Image 1');
+define('NEWSDESK_IMAGE_TWO_TITLE', 'Display Image 2');
+define('NEWSDESK_IMAGE_THREE_TITLE', 'Display Image 3');
+define('NEWSDESK_PREV_NEXT_BAR_LOCATION_TITLE', 'Location of Prev/Next Navigation Bar');
+define('MAX_DISPLAY_NEWSDESK_NEWS_TITLE', 'Display Main News Items');
+define('LATEST_DISPLAY_NEWSDESK_NEWS_TITLE', 'Latest News Box Counts');
+define('DISPLAY_LATEST_NEWS_BOX_TITLE', 'Display Latest News Box');
+define('DISPLAY_NEWS_CATAGORY_BOX_TITLE', 'Display News Category Box');
+define('DISPLAY_NEWSDESK_VIEWCOUNT_TITLE', 'Display View Counts');
+define('DISPLAY_NEWSDESK_READMORE_TITLE', 'Display Read More');
+define('DISPLAY_NEWSDESK_SUMMARY_TITLE', 'Display Summary');
+define('DISPLAY_NEWSDESK_HEADLINE_TITLE', 'Display Headline');
+define('DISPLAY_NEWSDESK_DATE_TITLE', 'Display Date');
+define('DISPLAY_NEWSDESK_IMAGE_TITLE', 'Display Image 1');
+define('DISPLAY_NEWSDESK_IMAGE_TWO_TITLE', 'Display Image 2');
+define('DISPLAY_NEWSDESK_IMAGE_THREE_TITLE', 'Display Image 3');
+define('DISPLAY_NEWSDESK_REVIEWS_TITLE', 'Display Reviews');
+define('MAX_DISPLAY_NEW_REVIEWS_TITLE', 'New Reviews');
+define('STICKY_ARTICLE_NAME_TITLE', 'Display Headline');
+define('STICKY_ARTICLE_SHORTTEXT_TITLE', 'Display Summary');
+define('STICKY_ARTICLE_DESCRIPTION_TITLE', 'Display Content');
+define('STICKY_NEWSDESK_VIEWCOUNT_TITLE', 'Display View Counts');
+define('STICKY_NEWSDESK_READMORE_TITLE', 'Display Read More');
+define('STICKY_DATE_ADDED_TITLE', 'Display Date');
+define('STICKY_ARTICLE_URL_TITLE', 'Display URL');
+define('STICKY_IMAGE_TITLE', 'Display Image 1');
+define('STICKY_IMAGE_TWO_TITLE', 'Display Image 2');
+define('STICKY_IMAGE_THREE_TITLE', 'Display Image 3');
+
+define('MAX_DISPLAY_NEWSDESK_SEARCH_RESULTS_DESC', 'How many articles do you want to list?');
+define('MAX_DISPLAY_NEWSDESK_PAGE_LINKS_DESC', 'Number of links to use for page-sets');
+define('NEWSDESK_ARTICLE_NAME_DESC', 'Do you want to display the headline? (0=disable; 1=enable)');
+define('NEWSDESK_ARTICLE_SHORTTEXT_DESC', 'Do you want to display the summary? (0=disable; 1=enable)');
+define('NEWSDESK_ARTICLE_DESCRIPTION_DESC', 'Do you want to display the content? (0=disable; 1=enable)');
+define('NEWSDESK_DATE_AVAILABLE_DESC', 'Do you want to display the date? (0=disable; 1=enable)');
+define('NEWSDESK_ARTICLE_URL_DESC', 'Do you want to display the outside resource URL? (0=disable; 1=enable)');
+define('NEWSDESK_STATUS_DESC', 'Do you want to display the status for the article? (0=disable; 1=enable)');
+define('NEWSDESK_IMAGE_DESC', 'Do you want to display image "1" for the article? (0=disable; 1=enable)');
+define('NEWSDESK_IMAGE_TWO_DESC', 'Do you want to display image "2" for the article? (0=disable; 1=enable)');
+define('NEWSDESK_IMAGE_THREE_DESC', 'Do you want to display image "3" for the article? (0=disable; 1=enable)');
+define('NEWSDESK_PREV_NEXT_BAR_LOCATION_DESC', 'Sets the location of the Prev/Next Navigation Bar (1-top, 2-bottom, 3-both)');
+define('MAX_DISPLAY_NEWSDESK_NEWS_DESC', 'How many articles do you want to display on the top page?');
+define('LATEST_DISPLAY_NEWSDESK_NEWS_DESC', 'How many articles do you want to display in the Latest News Box?');
+define('DISPLAY_LATEST_NEWS_BOX_DESC', 'Do you want to display the Latest News Box? (0=disable; 1=enable)');
+define('DISPLAY_NEWS_CATAGORY_BOX_DESC', 'Do you want to display the News Category Box? (0=disable; 1=enable)');
+define('DISPLAY_NEWSDESK_VIEWCOUNT_DESC', 'Do you want to display View Counts? (0=disable; 1=enable)');
+define('DISPLAY_NEWSDESK_READMORE_DESC', 'Do you want to display Read More? (0=disable; 1=enable)');
+define('DISPLAY_NEWSDESK_SUMMARY_DESC', 'Do you want to display the News Summary? (0=disable; 1=enable)');
+define('DISPLAY_NEWSDESK_HEADLINE_DESC', 'Do you want to display the News Headline? (0=disable; 1=enable)');
+define('DISPLAY_NEWSDESK_DATE_DESC', 'Do you want to display the News Date? (0=disable; 1=enable)');
+define('DISPLAY_NEWSDESK_IMAGE_DESC', 'Do you want to display image "1" for the article? (0=disable; 1=enable)');
+define('DISPLAY_NEWSDESK_IMAGE_TWO_DESC', 'Do you want to display image "2" for the article? (0=disable; 1=enable)');
+define('DISPLAY_NEWSDESK_IMAGE_THREE_DESC', 'Do you want to display image "3" for the article? (0=disable; 1=enable)');
+define('DISPLAY_NEWSDESK_REVIEWS_DESC', 'Do you want to display News Reviews? (0=disable; 1=enable)');
+define('MAX_DISPLAY_NEW_REVIEWS_DESC', 'Maximum number of new reviews to display');
+define('STICKY_ARTICLE_NAME_DESC', 'Do you want to display the headline? (0=disable; 1=enable)');
+define('STICKY_ARTICLE_SHORTTEXT_DESC', 'Do you want to display the summary? (0=disable; 1=enable)');
+define('STICKY_ARTICLE_DESCRIPTION_DESC', 'Do you want to display the content? (0=disable; 1=enable)');
+define('STICKY_NEWSDESK_VIEWCOUNT_DESC', 'Do you want to display View Counts? (0=disable; 1=enable)');
+define('STICKY_NEWSDESK_READMORE_DESC', 'Do you want to display Read More? (0=disable; 1=enable)');
+define('STICKY_DATE_ADDED_DESC', 'Do you want to display the date? (0=disable; 1=enable)');
+define('STICKY_ARTICLE_URL_DESC', 'Do you want to display the outside resource URL? (0=disable; 1=enable)');
+define('STICKY_IMAGE_DESC', 'Do you want to display image "1" for the article? (0=disable; 1=enable)');
+define('STICKY_IMAGE_TWO_DESC', 'Do you want to display image "2"for the article? (0=disable; 1=enable)');
+define('STICKY_IMAGE_THREE_DESC', 'Do you want to display image "3" for the article? (0=disable; 1=enable)');
+
+?>

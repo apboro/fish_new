@@ -1,0 +1,1178 @@
+/*
+  $Id: stylesheet.css,v 1.1.1.1 2003/09/18 19:05:47 wilt Exp $
+
+  osCommerce, Open Source E-Commerce Solutions
+  http://www.oscommerce.com
+
+  Copyright (c) 2003 osCommerce
+
+  Released under the GNU General Public License
+*/
+
+html,body
+   {
+     margin: 0;
+     padding: 0;
+   }
+
+body
+   {
+     font: 14px Arial, Helvetica, sans-serif;
+     font-weight: normal;
+     width: 97%;
+     margin: 0 auto;
+     background: url(images/osc.jpg) top left no-repeat;
+   }
+
+img
+   {
+	  border: 0;
+   }
+
+h2, h3
+   {
+     margin: 0 0 0 0;
+     padding: 0 0 0 0;
+   }
+   
+/* Цвет обычных ссылок в магазине */
+a 
+   {
+     color: #000;
+     text-decoration: none;
+     font-weight: normal;
+   }
+
+a:hover 
+   {
+     color: #990000;
+     text-decoration: underline;
+     font-weight: normal;
+   }
+/* /Цвет обычных ссылок в магазине */
+
+/* Шапка */
+div#header
+   {
+     width: 100%;
+     height: 126px;
+     padding: 0.5em 0 0.5em 0;
+   }
+
+table.header
+   {
+     width: 100%;
+     background: url(images/head_02.jpg) top right repeat-x;
+     border-left: 1px solid #011260;
+     border-right: 1px solid #011260;
+   }
+
+td.header-right
+   {
+     text-align: right;
+     width: 100%;
+     height: 126px;
+     background: url(images/head_03.jpg) top right no-repeat;
+     padding-right: 0.5em;
+   }
+
+td.header-left
+   {
+     height: 126px;
+     background: url(images/head_02.jpg) top right repeat-x;
+     padding-left: 0.5em;
+   }
+
+td.header-center
+   {
+     height: 126px;
+     background: url(images/head_02.jpg) top right no-repeat-x;
+   }
+
+#header .b1, #header .b2, #header .b3, #header .b4, #header .b1b, #header .b2b, #header .b3b, #header .b4b 
+   {
+     display: block;
+     overflow: hidden;
+     font-size: 1px;
+   }
+
+#header .b1, #header .b2, #header .b3, #header .b1b, #header .b2b, #header .b3b 
+   {
+     height: 1px;
+   }
+
+#header .b2 
+   {
+     background: #011260;
+     border-left: 1px solid #011260;
+     border-right: 1px solid #011260;
+   }
+
+#header .b3 
+   {
+     background: #0177c1;
+     border-left: 1px solid #011260;
+     border-right: 1px solid #011260;
+   }
+
+#header .b4 
+   {
+     background: #0177c1;
+     border-left: 1px solid #011260;
+     border-right: 1px solid #011260;
+   }
+
+#header .b4b 
+   {
+     background: #011260;
+     border-left: 1px solid #011260;
+     border-right: 1px solid #011260;
+   }
+
+#header .b3b 
+   {
+     background: #011260;
+     border-left: 1px solid #011260;
+     border-right: 1px solid #011260;
+   }
+
+#header .b2b 
+   {
+     background: #011260;
+     border-left: 1px solid #011260;
+     border-right: 1px solid #011260;
+   }
+
+#header .b1 
+   {
+     margin: 0 5px;
+   }
+
+#header .b2, #header .b2b 
+   {
+     margin: 0 3px;
+     border-width: 0 2px;
+   }
+
+#header .b3, #header .b3b 
+   {
+     margin: 0 2px;
+   }
+
+#header .b4, #header .b4b 
+   {
+     height: 2px;
+     margin: 0 1px;
+   }
+
+#header .b1b 
+   {
+     margin: 0 5px;
+     background: #011260;
+   }
+
+/* /Шапка */
+
+/* Рамка страницы */
+
+.b1, .b2, .b3, .b4, .b1b, .b2b, .b3b, .b4b 
+   {
+     display: block;
+     overflow: hidden;
+     font-size: 1px;
+   }
+
+.b1, .b2, .b3, .b1b, .b2b, .b3b 
+   {
+     height: 1px;
+   }
+
+.b2 
+   {
+     background: #d1d1c7;
+     border-left: 1px solid #d1d1c7;
+     border-right: 1px solid #d1d1c7;
+   }
+
+.b3 
+   {
+     background: #e9e9df;
+     border-left: 1px solid #d1d1c7;
+     border-right: 1px solid #d1d1c7;
+   }
+
+.b4 
+   {
+     background: #e9e9df;
+     border-left: 1px solid #d1d1c7;
+     border-right: 1px solid #d1d1c7;
+   }
+
+.b4b 
+   {
+     background: #e9e9df;
+     border-left: 1px solid #d1d1c7;
+     border-right: 1px solid #d1d1c7;
+   }
+
+.b3b 
+   {
+     background: #e9e9df;
+     border-left: 1px solid #d1d1c7;
+     border-right: 1px solid #d1d1c7;
+   }
+
+.b2b 
+   {
+     background: #e9e9df;
+     border-left: 1px solid #d1d1c7;
+     border-right: 1px solid #d1d1c7;
+   }
+
+.b1 
+   {
+     margin: 0 5px;
+   }
+
+.b2, .b2b 
+   {
+     margin: 0 3px;
+     border-width: 0 2px;
+   }
+
+.b3, .b3b 
+   {
+     margin: 0 2px;
+   }
+
+.b4, .b4b 
+   {
+     height: 2px;
+     margin: 0 1px;
+   }
+
+.b1b 
+   {
+     margin: 0 5px;
+     background: #d1d1c7;
+   }
+
+/* /Рамка страницы */
+
+/* Центр */
+div#container
+   {
+     width: 100%;
+     margin: 0 auto;
+     padding: 0;
+   }
+
+div.outer
+   {
+     padding: 0 0 .6em 0;
+     margin: 0 auto;
+   }
+
+div.outer-page
+   {
+     padding: 0;
+     margin: 0;
+     background: #e9e9df;
+     border-left: 1px solid #d1d1c7;
+     border-right: 1px solid #d1d1c7;
+   }
+   
+div#wrapper
+   {
+     float: left;
+     width: 100%;
+   }
+
+div#content
+   {
+     margin: 0 21%; /* отступ центра от боковых колонок */
+   }
+
+/* /Центр */
+
+/* Левая колонка */
+div#left
+   {
+     float: left;
+     width: 21%; /* Ширина левой колонки */
+     margin-left: -100%;
+   }
+/* /Левая колонка */
+
+/* Правая колонка */
+div#right
+   {
+     float: left;
+     width: 20%; /* Ширина правой колонки */
+     margin-left: -20%;
+   }
+/* /Правая колонка */
+
+/* Низ */
+div#footer
+   {
+     clear: left;
+     width: 100%;
+     text-align: center;
+     color: #000;
+   }
+
+div.clear-left
+   {
+     clear: left;
+   }   
+
+div.clear-all
+   {
+     clear: all;
+   }   
+
+div#footer p
+   {
+     margin: 0;
+     padding: 5px 10px;
+   }
+   
+/* /Низ */
+
+/* Навигация */
+div#navigation 
+   {
+     padding-top: 0.5em;
+     padding-bottom: 0.5em;
+     padding-left: 10px;
+     color: #000;
+   }
+
+#navigation span 
+   {
+     display: block;
+     font: 16px Arial, Helvetica, sans-serif;
+     font-weight: normal;
+     color: #000;
+     padding: 0 0 0 10px; 
+   }
+   
+#navigation a
+   {
+     font: 16px Arial, Helvetica, sans-serif;
+     font-weight: normal;
+     color: #000;
+     text-decoration: none;
+   }
+
+#navigation a:hover
+   {
+     font: 16px Arial, Helvetica, sans-serif;
+     font-weight: normal;
+     color: #000;
+     text-decoration: none;
+   }
+
+#navigation a:visited
+   {
+     font: 16px Arial, Helvetica, sans-serif;
+     font-weight: normal;
+     color: #000;
+     text-decoration: none;
+   }
+   
+/* /Навигация */
+   
+/* Заголовок страницы */
+#content h1 
+   {
+     font-family: Arial, Helvetica, sans-serif; 
+     font-size: 18px; 
+     color: #0170ca;
+   }
+
+#content h1 a 
+   {
+     font-family: Arial, Helvetica, sans-serif; 
+     font-size: 18px; 
+     color: #0170ca;
+   }
+
+#content h1 a:hover 
+   {
+     font-family: Arial, Helvetica, sans-serif; 
+     font-size: 18px; 
+     color: #0170ca;
+   }
+
+#content h1 a:visited 
+   {
+     font-family: Arial, Helvetica, sans-serif; 
+     font-size: 18px; 
+     color: #0170ca;
+   }
+
+/* /Заголовок страницы */
+
+/* Скругленные углы */
+.page 
+   {
+     background: transparent;
+     width: 100%;
+     margin-top: 0.5em;
+     margin-bottom: 0.5em;
+   }
+
+.pageItem 
+   {
+     background: #f1f1f6;
+     width: 100%;
+     padding; 0;
+     margin: 0;
+   }
+
+.pageItem p 
+   {
+     padding; 0;
+     margin: 0;
+   }
+   
+.pageItem ul, .pageItem ul
+   {
+     padding; 0;
+     margin: 0;
+   }
+   
+.page h1, .page p 
+   {
+     margin: 0 10px;
+   }
+
+.page h1 
+   {
+     font-size: 2em;
+     color: #fff;
+   }
+
+.page p 
+   {
+     padding-bottom: 0.5em;
+     padding-top: 0.5em;
+   }
+
+.page .b1, .page .b2, .page .b3, .page .b4, .page .b1b, .page .b2b, .page .b3b, .page .b4b 
+   {
+     display: block;
+     overflow: hidden;
+     font-size: 1px;
+   }
+
+.page .b1, .page .b2, .page .b3, .page .b1b, .page .b2b, .page .b3b 
+   {
+     height: 1px;
+   }
+
+.page .b2 
+   {
+     background: #f1f1f6;
+     border-left: 1px solid #fff;
+     border-right: 1px solid #f1f1f6;
+   }
+
+.page .b3 
+   {
+     background: #f1f1f6;
+     border-left: 1px solid #fff;
+     border-right: 1px solid #f1f1f6;
+   }
+
+.page .b4 
+   {
+     background: #f1f1f6;
+     border-left: 1px solid #fff;
+     border-right: 1px solid #f1f1f6;
+   }
+
+.page .b4b 
+   {
+     background: #f1f1f6;
+     border-left: 1px solid #f1f1f6;
+     border-right: 1px solid #f1f1f6;
+   }
+
+.page .b3b 
+   {
+     background: #f1f1f6;
+     border-left: 1px solid #f1f1f6;
+     border-right: 1px solid #f1f1f6;
+   }
+
+.page .b2b 
+   {
+     background: #f1f1f6;
+     border-left: 1px solid #f1f1f6;
+     border-right: 1px solid #f1f1f6;
+   }
+
+.page .b1 
+   {
+     margin: 0 5px;
+   }
+
+.page .b2, .page .b2b 
+   {
+     margin: 0 3px;
+     border-width: 0 2px;
+   }
+
+.page .b3, .page .b3b 
+   {
+     margin: 0 2px;
+   }
+
+.page .b4, .page .b4b 
+   {
+     height: 2px;
+     margin: 0 1px;
+   }
+
+.page .b1b 
+   {
+     margin: 0 5px;
+     background: #f1f1f6;
+   }
+
+.pagecontent 
+   {
+     display: block;
+     padding-left: 0.5em;
+     padding-right: 0.5em;
+     background: #f1f1f6;
+   }
+
+.pagecontentfooter 
+   {
+     display: block;
+     text-align: right;
+     background:#ffffff;
+     margin-top: 0.5em;
+     margin-bottom: 0.5em;
+   }
+/* /Скругленные углы */
+
+/*- Меню-закладки сверху */
+
+#menu 
+   {
+	  margin-top: 1em;
+     padding: 1em 0 0 0;
+     margin: 0 auto;
+   }
+
+#menu ul, #navigation ul li 
+   {
+     background: #e9e9df;
+     border-left: 1px solid #d1d1c7;
+     border-right: 1px solid #d1d1c7;
+	  list-style: none;
+	  margin: 0;
+	  padding: 0;
+   }
+
+#menu ul 
+   {
+	  padding: 5px 0 5px;
+	  text-align: left;
+   }
+
+#menu ul li 
+   {
+	  display: inline;
+	  margin:0 .375em;
+   }
+
+#menu ul li.last 
+   {
+	  margin-right: 0;
+   }
+
+#menu ul li a 
+   {
+     font: 16px Arial, Helvetica, sans-serif;
+	  color: #0170ca;
+	  padding: 0px 0 0px;
+     font-weight: bold;
+	  text-decoration: none;
+   }
+
+#menu ul li a:hover 
+   {
+     font: 16px Arial, Helvetica, sans-serif;
+	  color: #000;
+	  padding: 0px 0 0px;
+     font-weight: bold;
+	  text-decoration: none;
+   }
+
+#menu ul li.current a 
+   {
+     font: 16px Arial, Helvetica, sans-serif;
+	  color: #0170ca;
+	  padding: 0px 0 1px;
+     font-weight: bold;
+	  text-decoration: none;
+   }
+
+#menu ul li a span 
+   {
+	  padding: 0px 1em;
+   }
+
+#menu ul li.current a span 
+   {
+	  padding: 0px 1em 1px;
+     border-bottom:0;
+   }
+
+#menu ul li a:hover span 
+   {
+     font: 16px Arial, Helvetica, sans-serif;
+	  color: #000;
+     font-weight: bold;
+	  text-decoration: none;
+   }
+
+/*\*//*/
+#menu ul li a 
+   {
+     font: 16px Arial, Helvetica, sans-serif;
+	  display: inline-block;
+	  white-space: nowrap;
+	  width: 1px;
+   }
+
+#menu ul 
+   {
+	  padding-bottom: 0;
+	  margin-bottom: -1px;
+   }
+/**/
+
+/*\*/
+* html #menu ul li a 
+   {
+	  padding: 0;
+   }
+/**/
+
+#menu .b1, #menu .b2, #menu .b3, #menu .b4, #menu .b1b, #menu .b2b, #menu .b3b, #menu .b4b 
+   {
+     display: block;
+     overflow: hidden;
+     font-size: 1px;
+   }
+
+#menu .b1, #menu .b2, #menu .b3, #menu .b1b, #menu .b2b, #menu .b3b 
+   {
+     height: 1px;
+   }
+
+#menu .b2 
+   {
+     background: #d1d1c7;
+     border-left: 1px solid #d1d1c7;
+     border-right: 1px solid #d1d1c7;
+   }
+
+#menu .b3 
+   {
+     background: #e9e9df;
+     border-left: 1px solid #d1d1c7;
+     border-right: 1px solid #d1d1c7;
+   }
+
+#menu .b4 
+   {
+     background: #e9e9df;
+     border-left: 1px solid #d1d1c7;
+     border-right: 1px solid #d1d1c7;
+   }
+
+#menu .b4b 
+   {
+     background: #e9e9df;
+     border-left: 1px solid #d1d1c7;
+     border-right: 1px solid #d1d1c7;
+   }
+
+#menu .b3b 
+   {
+     background: #e9e9df;
+     border-left: 1px solid #d1d1c7;
+     border-right: 1px solid #d1d1c7;
+   }
+
+#menu .b2b 
+   {
+     background: #e9e9df;
+     border-left: 1px solid #d1d1c7;
+     border-right: 1px solid #d1d1c7;
+   }
+
+#menu .b1 
+   {
+     margin: 0 5px;
+   }
+
+#menu .b2, #menu .b2b 
+   {
+     margin: 0 3px;
+     border-width: 0 2px;
+   }
+
+#menu .b3, #menu .b3b 
+   {
+     margin: 0 2px;
+   }
+
+#menu .b4, #menu .b4b 
+   {
+     height: 2px;
+     margin: 0 1px;
+   }
+
+#menu .b1b 
+   {
+     margin: 0 5px;
+     background: #d1d1c7;
+   }
+   
+/*- /Меню-закладки сверху */
+
+/*- Боксы */
+
+/*- Бокс */
+
+/* Оформление */
+.box 
+   {
+     text-align: left;
+     margin: 0.2em;
+     padding-top: 0.1em;
+     padding-left: 0.4em;
+     padding-right: 0.4em;
+     padding-bottom: 0.4em; /* отступ от края бокса, т.е. от пунктирной линии */
+   }
+
+.box .top, .box .bottom 
+   {
+     display: block; 
+     background: transparent; 
+     font-size: 1px;
+   }
+
+.box .b1, .box .b2, .box .b3, .box .b4, .box .b1b, .box .b2b, .box .b3b, .box .b4b 
+   {
+     display: block;
+     overflow: hidden;
+     font-size: 1px;
+   }
+
+.box .b1, .box .b2, .box .b3, .box .b1b, .box .b2b, .box .b3b 
+   {
+     height: 1px;
+   }
+
+.box .b2 
+   {
+     background: #fefefe;
+     border-left: 1px solid #dddddd;
+     border-right: 1px solid #dddddd;
+   }
+
+.box .b3 
+   {
+     background: #fefefe;
+     border-left: 1px solid #dddddd;
+     border-right: 1px solid #dddddd;
+   }
+
+.box .b4 
+   {
+     background: #fefefe;
+     border-left: 1px solid #dddddd;
+     border-right: 1px solid #dddddd;
+   }
+
+.box .b4b 
+   {
+     background: #fbfbfb;
+     border-left: 1px solid #dddddd;
+     border-right: 1px solid #dddddd;
+   }
+
+.box .b3b 
+   {
+     background: #fbfbfb;
+     border-left: 1px solid #dddddd;
+     border-right: 1px solid #dddddd;
+   }
+
+.box .b2b 
+   {
+     background: #fbfbfb;
+     border-left: 1px solid #dddddd;
+     border-right: 1px solid #dddddd;
+   }
+
+.box .b1 
+   {
+     margin: 0 5px;
+   }
+
+.box .b2, .box .b2b 
+   {
+     margin: 0 3px;
+     border-width: 0 2px;
+   }
+
+.box .b3, .box .b3b 
+   {
+     margin: 0 2px;
+   }
+
+.box .b4, .box .b4b 
+   {
+     height: 2px;
+     margin: 0 1px;
+   }
+
+.box .b1b 
+   {
+     margin: 0 5px;
+     background: #dddddd;
+   }
+   
+.box .boxHeader 
+   {
+     display: block; 
+     background: url(images/box-bg.gif) top left repeat-x;
+	  color: #000000;
+	  font-size: 14px;
+	  font-family: Arial, Helvetica, sans-serif;
+	  text-transform: uppercase;
+	  font-weight: bold;
+     border-left: 1px solid #dddddd; 
+     border-right: 1px solid #dddddd;
+   }
+
+.box .boxContent
+   {
+     display: block;
+     padding-left: 0.5em; 
+	  font-size: 13px;
+	  font-family: Arial, Helvetica, sans-serif;
+     background: #fff; 
+     border-left: 1px solid #dddddd; 
+     border-right: 1px solid #dddddd;
+     font-weight: normal;
+   }
+
+.box .boxContent p
+   {
+     text-align: center;
+     padding: .2em;
+     margin: 0;
+   }
+
+.box .boxContent p.left
+   {
+     text-align: left;
+     padding: .2em;
+     margin: 0;
+   }
+
+.box .boxContent  span 
+   {
+     font-weight: bold;
+   }
+
+.box .boxHeader h5 
+   {
+     font: 14px Arial, Helvetica, sans-serif;
+     font-weight: bold;
+     padding-top: 0.3em;
+     padding-bottom: 0.4em;
+     padding-left: 0.5em;
+     margin-top: 0;
+     margin-bottom: 0;
+     margin-left: 0;
+     margin-right: 0;
+   }
+
+/* /Оформление */
+
+ 
+/*- /Бокс */
+
+/*- /Боксы */
+
+td.boxText 
+   {
+     text-align: left;
+   }
+      
+td.pageHeading 
+   {
+     font-family: Arial, Helvetica, sans-serif; 
+     font-size: 18px; 
+     color: #0170ca;
+   }
+
+input.input-class, select, checkbox, textarea, radio
+   {
+     border: 1px solid #d1d1c7;
+     padding: .4em;
+   }
+   
+.messageBox { font-family: Verdana, Arial, sans-serif; font-size: 10px; }
+.messageStackError, .messageStackWarning { font-family: Verdana, Arial, sans-serif; font-size: 10px; background-color: #ffb3b5; }
+.messageStackSuccess { font-family: Verdana, Arial, sans-serif; font-size: 10px; background-color: #99ff00; }
+
+   /* Start Products Specifications */
+ul.specification_box {
+  line-height: 1.5;
+}
+
+option, optgroup {
+  text-decoration: none;
+  font-style: normal;
+  margin: 0;
+  padding: 2px 2px 0 2px;
+  font-family: Verdana, Arial, sans-serif;
+}
+
+.filter_count {
+  font-weight: normal;
+}
+
+.no_results {
+  color: #bbb;
+}
+
+.close {
+  font-size: 75%;
+  position: relative;
+  top: -4px;
+}
+
+img.image_filter {  /* Applies to images used as filters */
+  width: 20px;  /* Width of each image */
+  height: 20px;  /* Height of each image */
+  padding: 5px;  /* Padding between the category contents and the border */
+  border: 1px solid #182d5c;  /* Border around each image */
+  margin: 3px;  /* Margin between the image border and other objects */
+  background: #ffffff;  /* Background color behind each image */
+  float: left;  /* Don't change this */
+}
+
+.specs_box { /* Applies to the table surrounding the Specifications/tabs onproduct_info.php */
+}
+
+#variantsBlock {
+}
+
+#variantsBlockTitle {
+  font-size: 10pt;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  width: 10em;
+}
+
+#variantsBlockData {
+  align: left;
+}
+
+.productInfoKey {
+  font-size: 9pt;
+  font-weight: bold;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+
+.productInfoValue {
+  font-size: 9pt;
+  vertical-align: middle;
+}
+
+#productInfoPrice {
+  font-size: 10pt;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+
+#tabContainer { /* Container for the whole thing */
+    position: relative; 
+    width: 95%;  /* Change the width of the tabs & content box */
+  } 
+  
+  #tabMenu { /* Container for the menu tabs */
+    position: relative; 
+    height: 30px; 
+    margin-bottom: -3px;
+  } 
+  
+  #tabContent { /* Container for the content box */
+    clear: left;
+    position: relative; 
+/*    height: 266px; */  /* Uncomment for fixed height content box */
+    font: 12px Verdana, Arial, Helvetica, sans-serif; 
+    color: #444444; 
+    border-top: 1px solid #ccc; 
+    border-left: 1px solid #ccc; 
+    border-right: 4px solid #ccc; 
+    border-bottom: 4px solid #ccc; 
+/*    overflow: auto; */  /* Uncomment for fixed height content box */
+  } 
+  
+  #tabContent .content {  /* Don't change this */
+    display: none;   /* Don't change this */
+    margin-bottom: 0.7em;  /* Extra space between the text and the bottom of the content box */
+  } 
+  
+  #tabContent .active {  /* Don't change this */
+    padding: 5px 10px; 
+    display: block; 
+  } 
+  
+  .inside_heading {  /* Heading inside the content box */
+    font-size: 12px;
+    font-weight: bold; 
+    border-bottom: 1px dashed #999999;
+  }
+
+/*  
+Generated via www.cssmenubuilder.com 
+
+Copyright (c) 2008-2009 www.cssmenubuilder.com
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+  .menu {  /* Container for the tabs */
+    margin: 0 auto; 
+    padding: 0; 
+    height: 30px; /* Height of the tabs */
+    width: 100%; 
+    display: block; 
+    background: url('images/topMenuImages.png') repeat-x; /* Change the image name if you have changed your image */
+  }
+  
+  .menu li {  /* Individual tabs */
+    padding: 0; 
+    margin: 0; 
+    list-style: none; 
+    display: inline;
+  }
+  
+  .menu li a {  /* Links from the tabs to the content box */
+    float: left; 
+    padding-left: 15px; 
+    display: block; 
+    color: #fff; 
+    text-decoration: none; 
+    font: 9pt Verdana, Arial, Helvetica, sans-serif; 
+    cursor: pointer; 
+    background: url('images/topMenuImages.png') 0px -30px no-repeat;  /* Change the image name if you have changed your image */
+  }
+  
+  .menu li a span {  /* Text in the tabs */
+    line-height: 30px; 
+    float: left; 
+    display: block; 
+    padding-right: 15px; 
+    background: url('images/topMenuImages.png') 100% -30px no-repeat; /* Change the image name if you have changed your image */
+  }
+  
+  .menu li a:hover {  /* Hover/mouseover tabs */
+    background-position: 0px -60px; 
+    color: #fff;
+  }
+  
+  .menu li a:hover span {  /* Hover/mouseover text in the tabs */
+    background-position: 100% -60px;
+  }
+  
+  .menu li a.active, .menu li a.active:hover {  /* Active tab */
+    line-height: 30px; 
+    font: 9pt Verdana, Arial, Helvetica, sans-serif; 
+    background: url('images/topMenuImages.png') 0px -90px no-repeat; 
+    color: #000;
+  }
+  
+  .menu li a.active span, .menu li a.active:hover span {  /* Text in the active tab */
+    background: url('images/topMenuImages.png') 100% -90px no-repeat; /* Change the image name if you have changed your image */
+  }
+  
+/* End Products Specifications */
+
+td.odd { background: transparent; }
+td.even { background: transparent; }
+
+/* ############ checkout ################## */
+
+.sm_layout_box h2 
+	{
+		padding: .5em .5em .5em 0;
+	}
+
+.sm_layout_box 
+	{
+		padding-left: 1em;
+	}
+
+div.CheckoutError 
+	{
+		border: 1px solid; 
+		border-color: #ff0000; 
+		background-color: #FFCCCC; 
+		text-align: left; 
+		margin-bottom: 0.5em; 
+		margin-top: 0.5em;
+		padding: 0.5em;
+	}
+
+#sc_content
+	{
+		padding: .5em;
+	}		
+	
+#content h2 
+   {
+     font-family: Arial, Helvetica, sans-serif; 
+     font-size: 18px; 
+     color: #0170ca;
+   }	

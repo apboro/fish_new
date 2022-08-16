@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  apache:
+    image: apache-php_web:latest
+    ports:
+       - 99:80
+    volumes:
+      - ./composer.phar:/usr/local/bin/composer
+      - ./:/var/www/html/
+    container_name: apache_composer_import_from_market
+    

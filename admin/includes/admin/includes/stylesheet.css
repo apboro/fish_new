@@ -1,0 +1,277 @@
+/*
+  $Id: stylesheet.css,v 1.2 2003/09/24 15:18:14 wilt Exp $
+
+  osCommerce, Open Source E-Commerce Solutions
+  http://www.oscommerce.com
+
+  Copyright (c) 2002 osCommerce
+
+  Released under the GNU General Public License
+*/
+@import url("menu.css");
+/* links */
+a:link { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #000000; font-weight: normal; text-decoration: none; }
+
+a:visited { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #000000; font-weight: normal; text-decoration: none; }
+a:active { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #000000; font-weight: normal; text-decoration: none; }
+a:hover { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #000000; font-weight: normal; text-decoration: underline; }
+
+a:link.headerLink { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: black; font-weight: bold; text-decoration: none; }
+a:visited.headerLink { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: black; font-weight: bold; text-decoration: none }
+a:active.headerLink { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: black; font-weight: bold; text-decoration: none; }
+a:hover.headerLink { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: black; font-weight: bold; text-decoration: underline; }
+
+a:link.menuBoxHeadingLink { font-size: 12px; color: #616060; font-weight: bold; text-decoration: none; }
+a:visited.menuBoxHeadingLink { font-size: 12px; color: #616060; font-weight: bold; text-decoration: none; }
+a:active.menuBoxHeadingLink { font-size: 12px; color: #616060; font-weight: bold; text-decoration: none; }
+a:hover.menuBoxHeadingLink { font-size: 12px; color: #616060; font-weight: bold; text-decoration: none; }
+
+a:link.menuBoxContentLink { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #616060; font-weight: normal; text-decoration: none; }
+a:visited.menuBoxContentLink { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #616060; font-weight: normal; text-decoration: none; }
+a:active.menuBoxContentLink { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #616060; font-weight: normal; text-decoration: none; }
+a:hover.menuBoxContentLink { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #616060; font-weight: normal; text-decoration: underline; }
+
+a:link.splitPageLink { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #0000FF; font-weight: normal; text-decoration: none; }
+a:visited.splitPageLink { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #0000FF; font-weight: normal; text-decoration: none; }
+a:active.splitPageLink { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #0000FF; font-weight: normal; text-decoration: none; }
+a:hover.splitPageLink { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #0000FF; font-weight: normal; text-decoration: underline; background-color: #FFFF33; }
+
+/* menu box */
+.menuBoxHeading { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #616060; background-color: #ffffff; }
+.menuBoxContent { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #616060; }
+
+/* page */
+body { background-color: #ffffff; color: #000000; margin: 0px; }
+.headerBar { background-color: #B3BAC5; }
+.headerBarContent { font-family: Verdana, Arial, sans-serif; font-size: 8px; color: #000080; font-weight: bold; padding: 2px }
+.columnLeft { background-color: #F0F1F1; border-color: #999999; border-width: 1px; border-style: solid; padding: 2px; }
+.pageHeading { font-family: Verdana, Arial, sans-serif; font-size: 18px; color: #727272; font-weight: bold; }
+
+/* data table */
+.dataTableHeadingRow { background-color: #C9C9C9; }
+.dataTableHeadingContent { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #000000; font-weight: bold; }
+.dataTableRow { background-color: #F0F1F1; }
+.dataTableRowSelected { background-color: #DEE4E8; }
+.dataTableRowOver { background-color: #FFFFFF; cursor: pointer; cursor: hand; }
+.dataTableContent { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #000000; }
+.dataTableContentRed { font-family: Verdana, Arial, sans-serif; font-size: 10px; color: #CC0000; }
+.dataTableContentRedAlert { font-family: Verdana, Arial, sans-serif; font-size: 10px; color: #FF0000; font-weight: bold; }
+
+/* info box */
+.infoBoxHeading { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #ffffff; background-color: #B3BAC5; }
+.infoBoxContent { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #000000; background-color: #DEE4E8; }
+
+/* message box */
+
+.messageBox { font-family: Verdana, Arial, sans-serif; font-size: 12px; }
+.messageStackError, .messageStackWarning { font-family: Verdana, Arial, sans-serif; font-size: 12px; background-color: #ffb3b5; }
+.messageStackSuccess { font-family: Verdana, Arial, sans-serif; font-size: 12px; background-color: #99ff00; }
+
+/* forms */
+CHECKBOX, INPUT, RADIO, SELECT, TEXTAREA, FILE { font-family: Verdana, Arial, sans-serif; font-size: 11px; }
+FORM { display: inline; }
+
+/* account */
+.formArea { background-color: #f1f9fe; border-color: #7b9ebd; border-style: solid; border-width: 1px; }
+.formAreaTitle { font-family: Tahoma, Verdana, Arial, sans-serif; font-size: 12px; font-weight: bold; }
+
+/* attributes */
+.attributes-odd { background-color: #f4f7fd; }
+.attributes-even { background-color: #ffffff; }
+
+/* miscellaneous */
+.specialPrice { color: #ff0000; }
+.oldPrice { text-decoration: line-through; }
+.fieldRequired { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #ff0000; }
+.smallText { font-family: Verdana, Arial, sans-serif; font-size: 12px; }
+.main { font-family: Verdana, Arial, sans-serif; font-size: 12px; }
+.errorText { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #ff0000; }
+
+/* WebMakers.com Added: Editing Attributes */
+.attributeBoxContent { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #000000; background-color: #ffffff; }
+.TR.attributeBoxContent { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #000000; background-color: #ffffff; }
+.TD.attributeBoxContent { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #000000; background-color: #ffffff; }
+
+/* properties */
+.properties-odd { background-color: #DEE4E8; }
+.properties-even { background-color: #F0F1F1; }
+
+/* Lango Infobox Admin */
+.infoboxAdmin { font-family: Verdana, Arial, sans-serif; font-size: 12px; color: #000000; }
+.infobox-listing-odd {   background: #f8f8f9; }
+.infobox-listing-even {   background: ##F0F1F1; }
+
+h3 { font-family: Verdana, Arial, sans-serif; font-size: 16px; color: #727272; font-weight: bold; }
+
+.page 
+   {
+     background: transparent;
+     width: 98%;
+     margin: 0.5em auto 0.5em auto;
+   }
+	
+	.but_cat {
+background-image: url(../images/but_cat_fon.gif);
+background-repeat: no-repeat;
+background-position: left top;
+width: 80px;
+height: 22px;
+border: none;
+cursor: pointer;
+padding-bottom: 2px;
+text-transform:  lowercase;
+font-size: 12px;
+margin-bottom: 20px;
+}
+.but_cat2 {
+background-image: url(../images/but_cat_fon2.gif);
+background-repeat: no-repeat;
+background-position: left top;
+width: 150px;
+height: 22px;
+border: none;
+cursor: pointer;
+padding-bottom: 2px;
+text-transform:  lowercase;
+font-size: 12px;
+margin-bottom: 20px;
+}
+
+/* Start Products Specifications */
+.main { font-family: Verdana, Arial, sans-serif; font-size: 12px;}
+.errorText { font-family: Verdana, Arial, sans-serif; font-size: 10px; color: #ff0000; }
+
+.infoBox {
+  background: transparent;
+}
+
+.infoBoxContents {
+  background: #f8f8f9;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+}
+
+.infoBoxNotice {
+  background: #FF8E90;
+}
+
+.infoBoxNoticeContents {
+  background: #FFE6E6;
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+}
+
+TD.infoBoxHeading {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  background: #bbc3d3;
+  color: #ffffff;
+}
+
+TD.infoBox, SPAN.infoBox {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+}
+
+TR.productListing-odd {
+  background: #f8f8f9;
+}
+
+TR.productListing-even {
+  background: #f8f8f9;
+}
+
+TABLE.productListing {
+  border: 1px;
+  border-style: solid;
+  border-color: #b6b7cb;
+  border-spacing: 1px;
+}
+
+.productListing-heading {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+  background: #b6b7cb;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+TD.productListing-data {
+  font-family: Verdana, Arial, sans-serif;
+  font-size: 10px;
+}
+
+.specification_box {
+  margin-top: 10px;
+}
+
+.specification_box li {
+  line-height: 1.5;
+}
+
+.description {
+  font-family: Verdana, Arial, sans-serif; 
+  font-size: 8pt;
+  max-width: 125px;
+}
+
+/* Start Products Specifications */
+iul.specification_box {
+  line-height: 1.5;
+}
+
+mg.image_filter {
+  width: 20px;  /* Width of each image */
+  height: 20px;  /* Height of each image */
+  padding: 5px;  /* Padding between the category contents and the border */
+  border: 1px solid #182d5c;  /* Border around each image */
+  margin: 3px;  /* Margin between the image border and other objects */
+  background: #ffffff;  /* Background color behind each image */
+  float: left;  /* Don't change this */
+}
+
+.image_box { /* Used in Admin -> Categories only to display images with checkboxes */
+  width: 40px;  /* Width of each Image Box */
+  height: 60px;  /* Height of each Image Box */
+  padding: 5px;  /* Padding between the Image Box contents and the border */
+  border: 1px solid #182d5c;  /* Border around each Image Box */
+  margin: 3px;  /* Margin between the Image Box border and other objects */
+  background: #eeeeee;  /* Background color behind each Image Box */
+  float: left;  /* Don't change this */
+}
+/* End Products Specifications */
+
+div#map
+	{
+		font-family: Verdana, Arial, sans-serif; 
+		font-size: 12px; 
+		color: #000000; 
+		font-weight: normal; 
+		text-decoration: none;
+	}   
+
+div#map #error
+	{
+		border: 1px solid #ff0000;
+		padding: .5em;
+		margin: 0 0 .5em 0;
+		background: #fcc;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 4px;
+		border-bottom-right-radius: 4px;
+		-moz-border-radius-topleft: 4px;
+		-webkit-border-top-left-radius: 4px;
+		-moz-border-radius-topright: 4px;
+		-webkit-border-top-right-radius: 4px;
+		-moz-border-radius-bottomleft: 4px;
+		-webkit-border-bottom-left-radius: 4px;
+		-moz-border-radius-bottomright: 4px;
+		-webkit-border-bottom-right-radius: 4px;
+	}   
+	
+div#tabs
+	{
+		margin: .5em 0 0 0;
+	}   	

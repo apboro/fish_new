@@ -1,0 +1,28 @@
+15.08.2019 17:03:57{3.67--3.67} Мбайт:&lt;Процесс номер:5795&gt;<br />
+15.08.2019 17:03:57{3.67--3.67} Мбайт:&lt;Запущено с:()&gt;<br />
+15.08.2019 17:03:57{3.67--3.67} Мбайт:&lt;Съели памяти:3.67 Мбайт&gt;<br />
+15.08.2019 17:04:00{3.67--3.67} Мбайт:&lt;Синхронизация склада&gt;<br />
+15.08.2019 17:04:00{3.67--3.67} Мбайт:&lt;Определение остатков со склада&gt;<br />
+15.08.2019 17:04:00{3.67--3.67} Мбайт:&lt;Загрузка данных со склада:Stock Принудительно &gt;<br />
+15.08.2019 17:04:00{3.67--3.67} Мбайт:&lt;Делаем запрос:Stock действие:list&gt;<br />
+15.08.2019 17:04:01{27--27} Мбайт:&lt;Загрузка данных со склада:Stock&gt;<br />
+15.08.2019 17:04:01{27--27} Мбайт:&lt;Делаем запрос:Stock действие:list&gt;<br />
+15.08.2019 17:04:01{27.26--27.26} Мбайт:&lt;Загрузка данных со склада:Stock Принудительно &gt;<br />
+15.08.2019 17:04:01{27.26--27.26} Мбайт:&lt;Делаем запрос:Stock действие:list&gt;<br />
+15.08.2019 17:04:01{27.26--27.26} Мбайт:&lt;Не удалось загрузить со склада Stock&gt;<br />
+15.08.2019 17:04:01{5.77--27.26} Мбайт:&lt;Съели памяти:27.26 Мбайт&gt;<br />
+15.08.2019 17:04:01{5.77--27.26} Мбайт:&lt;Всего запросов в БД:( 1 )&gt;<br />
+15.08.2019 17:04:01{5.77--27.26} Мбайт:&lt;Закончили&gt;<br />
+15.08.2019 17:04:01{5.77--27.26} Мбайт:&lt;Done&gt;<br />
+PHP Warning:  file_put_contents(/var/www/html/yourfish.ru/admin/moysklad/classes/time.bin): failed to open stream: Permission denied in /var/www/html/yourfish.ru/admin/moysklad/classes/msklad.php on line 162
+
+Warning: file_put_contents(/var/www/html/yourfish.ru/admin/moysklad/classes/time.bin): failed to open stream: Permission denied in /var/www/html/yourfish.ru/admin/moysklad/classes/msklad.php on line 162
+PHP Warning:  file_put_contents(/var/www/html/yourfish.ru/admin/moysklad/classes/time.bin): failed to open stream: Permission denied in /var/www/html/yourfish.ru/admin/moysklad/classes/msklad.php on line 598
+
+Warning: file_put_contents(/var/www/html/yourfish.ru/admin/moysklad/classes/time.bin): failed to open stream: Permission denied in /var/www/html/yourfish.ru/admin/moysklad/classes/msklad.php on line 598
+PHP Warning:  file_put_contents(/var/www/html/yourfish.ru/admin/moysklad/classes/time.bin): failed to open stream: Permission denied in /var/www/html/yourfish.ru/admin/moysklad/classes/msklad.php on line 598
+
+Warning: file_put_contents(/var/www/html/yourfish.ru/admin/moysklad/classes/time.bin): failed to open stream: Permission denied in /var/www/html/yourfish.ru/admin/moysklad/classes/msklad.php on line 598
+PHP Warning:  file_put_contents(/var/www/html/yourfish.ru/admin/moysklad/classes/time.bin): failed to open stream: Permission denied in /var/www/html/yourfish.ru/admin/moysklad/classes/msklad.php on line 598
+
+Warning: file_put_contents(/var/www/html/yourfish.ru/admin/moysklad/classes/time.bin): failed to open stream: Permission denied in /var/www/html/yourfish.ru/admin/moysklad/classes/msklad.php on line 598

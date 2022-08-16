@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="db7304ed-7865-454b-9c28-32336a0854a2" name="YFTestDB Mapping">
+      <data-sources db="c8aa6ea7-5557-4c72-beef-38b7f206bdcc" />
+    </mapping>
+  </component>
+</project>

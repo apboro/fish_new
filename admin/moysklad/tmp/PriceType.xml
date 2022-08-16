@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection total="2" start="0" count="1000">
+<priceType index="0" name="Цена продажи" updated="2017-10-02T13:36:46.389+03:00" updatedBy="admin@yourfish2"><accountUuid>7788bc51-bc5c-11e5-7a69-9711000009e8</accountUuid><accountId>7788bc51-bc5c-11e5-7a69-9711000009e8</accountId><uuid>77a7f16f-bc5c-11e5-7a69-8f550007ba19</uuid></priceType><priceType index="1" name="Магазинная" updated="2017-10-02T13:36:46.390+03:00" updatedBy="admin@yourfish2"><accountUuid>7788bc51-bc5c-11e5-7a69-9711000009e8</accountUuid><accountId>7788bc51-bc5c-11e5-7a69-9711000009e8</accountId><uuid>f0ea9a47-c927-11e5-7a69-8f550000225a</uuid></priceType>
+</collection>

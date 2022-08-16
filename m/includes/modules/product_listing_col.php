@@ -1,0 +1,1 @@
+<?php require (DIR_WS_MODULES.'product_listing.php');?>

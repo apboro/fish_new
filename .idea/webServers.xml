@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="19a4e223-c979-412a-bc66-2789711b3f9b" name="YourFish.RU" url="https://yourfish.ru">
+        <fileTransfer rootFolder="/root/docker/volumes/www/yourfish.ru" accessType="SFTP" host="185.240.103.220" port="22" sshConfigId="8dd96f98-24e5-4e54-b5e1-72d61a02e0d5" sshConfig="root@185.240.103.220:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="95f98ea5-d472-4515-b267-524c398fc3f4" name="serverYF">
+        <fileTransfer accessType="SFTP" host="185.240.103.220" port="22" sshConfigId="8dd96f98-24e5-4e54-b5e1-72d61a02e0d5" sshConfig="root@185.240.103.220:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

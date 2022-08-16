@@ -1,0 +1,64 @@
+{
+  "status": "OK",
+  "result":
+  {
+    "recommendations":
+    [
+      {
+        "feedId": 3456,
+        "offerId": "12",
+        "bid": 0.32,
+        "minBid": 0.32,
+        "dontPullUpBids": false,
+        "modelCard":
+        {
+          "currentPosAll": 5,
+          "currentPosTop": 5,
+          "posRecommendations":
+          [
+            {
+              "pos": 1,
+              "bid": 1.26
+            },
+            {
+              "pos": 2,
+              "bid": 1.03
+            },
+            {
+              "pos": 3,
+              "bid": 0.89
+            },
+            {
+              "pos": 4,
+              "bid": 0.86
+            },
+            {
+              "pos": 5,
+              "bid": 0.51
+            },
+            {
+              "pos": 6,
+              "bid": 0.5
+            },
+            {
+              "pos": 7,
+              "bid": 0.41
+            },
+            {
+              "pos": 8,
+              "bid": 0.35
+            },
+            {
+              "pos": 9,
+              "bid": 0.34
+            },
+            {
+              "pos": 10,
+              "bid": 0.26
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

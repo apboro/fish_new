@@ -1,0 +1,9 @@
+###############################################
+## DO NOT REMOVE OR EDIT LINES BELOW     
+# ***    automatically generated config     ***
+AuthType basic
+AuthName "adminka"
+AuthUserFile /www/yourfish/www/htdocs/admin/.htpasswd-hc
+Require valid-user
+# *** end of automatically generated config ***
+###############################################

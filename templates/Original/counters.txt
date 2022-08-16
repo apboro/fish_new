@@ -1,0 +1,36 @@
+<!--LiveInternet counter--><script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='//counter.yadro.ru/hit?t44.15;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet' "+
+"border='0' width='31' height='31'><\/a>")
+//--></script><!--/LiveInternet-->
+
+<!-- Yandex.Metrika counter -->
+<div style="display:none;"><script type="text/javascript">
+(function(w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter10527676 = new Ya.Metrika({id:10527676,
+                    clickmap:true,
+                    accurateTrackBounce:true});
+        }
+        catch(e) { }
+    });
+})(window, "yandex_metrika_callbacks");
+</script></div>
+<script src="/ext/js/watch.js" type="text/javascript" defer="defer"></script>
+<noscript><div><img src="//mc.yandex.ru/watch/10527676" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+
+<A href="http://www.fishing-price.ru"rel="nofollow" target="_blank"><IMG height=31 width=88 alt="Fishing-Price.Ru" src="/images/banners/fpru.gif" border=0></A>
+<IMG height=31 width=88 alt="Сети зло" src="/notseti.gif" border=0>
+
+
+
+
+
