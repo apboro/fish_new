@@ -121,6 +121,7 @@ class CDEKIntegration
 
     public function __construct()
     {
+
         ini_set('error_reporting', E_ALL);
         ini_set('display_errors', 1);
         ini_set('display_startup_errors', 1);
@@ -138,7 +139,6 @@ class CDEKIntegration
 //            foreach ($marketOutlets as $outlet) {
 //                $this->addOutlet(json_encode($outlet));
 //            }
-
             //$this->addOutlet($this->getDemoOutlet());
 
 
@@ -177,8 +177,8 @@ class CDEKIntegration
      */
     private function getCdekPeriod($CdekCityCode)
     {
-        $CDEK_UserKey = "yy730tubinej2gmzmovzn48xz43vr5vl";
-        $CDEK_UserPassword = "qgsp3xueexi94k05mca1hshpyfwdlgon"; 
+        $CDEK_UserKey = "1030310ac8a91bc76db4e53e2f7b01e8";
+        $CDEK_UserPassword = "013fc3f5c1a2493786efe625416c58dc";
         try {
             $calc = new CalculatePriceDeliveryCdek();
             $calc->setAuth($CDEK_UserKey, $CDEK_UserPassword);
@@ -192,7 +192,7 @@ class CDEKIntegration
             if ($calc->calculate() === true) {
                 $res = $calc->getResult();
 //                echo "<pre>";
-//                var_dump($res);
+//                var_dump($calc);
 //                echo "</pre>";
 //                exit;
                 $periodMax = $res['result']['deliveryPeriodMax'];
@@ -752,8 +752,8 @@ class CDEKIntegration
             $times = explode('/', $time); //10:00/19:00
             $firstDay = $days[0];
             $lastDay = $days[count($days) - 1];
-            if ($times[1]<=$times[0]){
-                $times[1]="23:59";
+            if ($times[1] <= $times[0]) {
+                $times[1] = "23:59";
             }
             $scheduleItems[] =
                 array("startDay" => $dayMap[$firstDay], //'MONDAY'
@@ -775,7 +775,7 @@ class CDEKIntegration
         if (!$this->importCdekData) {
             $this->importCdekData = new SimpleXMLElement(file_get_contents($this->CDEK_API_URL . 'pvzlist/v1/xml?countryiso=RU'));//&regionid=19'));//&cityid=98 //countryiso=RUcityid=83247'));
         }
-            return $this->importCdekData;
+        return $this->importCdekData;
     }
 
     /**
@@ -835,7 +835,7 @@ class CDEKIntegration
             }
             /** @var Outlet $outlet */
             $outletArray = (array)$outlet;
-            $maxDeliveryDays=$this->getCdekPeriod($outlet['CityCode']);
+            $maxDeliveryDays = $this->getCdekPeriod($outlet['CityCode']);
             $data[$key] = array('name' => 'Пункт выдачи ' . (string)$outlet['Name'],
                 'type' => 'DEPOT',
                 'coords' => (string)$outlet['coordX'] . ', ' . (string)$outlet['coordY'],
@@ -846,13 +846,13 @@ class CDEKIntegration
                 'phones' => array('+7 (495) 009-04-05'),
                 'workingSchedule' => $this->prepareWorkingSchedule($outletArray['WorkTimeY']),
                 'deliveryRules' => array(array("cost" => 240,
-                    "minDeliveryDays" => $maxDeliveryDays+3,
-                    "maxDeliveryDays" => $maxDeliveryDays+5,
+                    "minDeliveryDays" => $maxDeliveryDays + 6,
+                    "maxDeliveryDays" => $maxDeliveryDays + 8,
                     "deliveryServiceId" => 51, //Сдэк
                     "priceFreePickup" => 3500))
             );
         }
-    
+
         return $data;
     }
 

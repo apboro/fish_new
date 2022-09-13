@@ -32,24 +32,25 @@ $baseClient = new \Yandex\Market\Partner\Clients\BaseClient($clientId, $token);
 $OrderProcessingClient = new \Yandex\Market\Partner\Clients\OrderProcessingClient($clientId, $token);
 
     $clientMarket = HttpClient::create(['http_version' => '2.0']);
-    $resMarket = $clientMarket->request('GET', 'https://api.partner.market.yandex.ru/v2/campaigns/22787539/orders/115952063/buyer.json', [
-        'headers' => [
-            'Content-Type' => 'application/json',
-            'Authorization: OAuth oauth_token="AQAAAAABXSvwAAeYsDlscNzd10MlsMeftHYTUNc", oauth_client_id="9f011ee17c414b3194c8853266ba7d27"',
-        ],
-    ]);
-    $order = $resMarket->toArray();
-    var_dump($order['result']['phone']);
+//    $resMarket = $clientMarket->request('GET', 'https://api.partner.market.yandex.ru/v2/campaigns/22787539/orders/115952063/buyer.json', [
+//        'headers' => [
+//            'Content-Type' => 'application/json',
+//            'Authorization: OAuth oauth_token="AQAAAAABXSvwAAeYsDlscNzd10MlsMeftHYTUNc", oauth_client_id="9f011ee17c414b3194c8853266ba7d27"',
+//        ],
+//    ]);
+//    $order = $resMarket->toArray();
+//    var_dump($order['result']['phone']);
 
 //    $cdek = $order['order']['delivery']['outletId'];
 //
-//$resMarket = $clientMarket->request('GET', 'https://api.partner.market.yandex.ru/v2/campaigns/22787539/outlets/'.$cdek.'.json', [
-//    'headers' => [
-//        'Content-Type' => 'application/json',
-//        'Authorization: OAuth oauth_token="AQAAAAABXSvwAAeYsDlscNzd10MlsMeftHYTUNc", oauth_client_id="9f011ee17c414b3194c8853266ba7d27"',
-//    ],
-//
-//]);
+$resMarket = $clientMarket->request('GET', 'https://api.partner.market.yandex.ru/v2/regions.json?name=Себеж', [
+    'headers' => [
+        'Content-Type' => 'application/json',
+        'Authorization: OAuth oauth_token="AQAAAAABXSvwAAeYsDlscNzd10MlsMeftHYTUNc", oauth_client_id="9f011ee17c414b3194c8853266ba7d27"',
+    ],
+
+]);
+var_dump($resMarket->toArray());
 //$cdek_outlet_id=$resMarket->toArray();
 //$cdek_outlet_code = str_replace('CDEK-', '', $cdek_outlet_id['outlet']['shopOutletCode']);
 
