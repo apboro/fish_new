@@ -1,5 +1,6 @@
 <?php
 include_once("CalculatePriceDeliveryCdek.php");
+
 abstract class Outlet
 {
     public $PhoneDetail = '';
@@ -139,9 +140,13 @@ class CDEKIntegration
 //            }
 
             //$this->addOutlet($this->getDemoOutlet());
-//            $this->removeOutlets();
-//            $this->updateOutlets();
-//            $this->addOutlets();
+
+
+            $this->removeOutlets();
+            $this->updateOutlets();
+            $this->addOutlets();
+
+
             //$cdeks=$this->getOutletsFromCdek();
             //echo count($cdeks);
             //$this->getCdekPeriod(98);
@@ -159,9 +164,10 @@ class CDEKIntegration
 //                echo '<br>'.$outlet['City'];
 //            };
 //            echo "</pre>";
-
-
-            $this->getCdekPeriod(44);
+//            var_dump($this->request('regions.json', array('name' => 'Себеж')));
+//            $this->getRegion('Себеж');
+//            $this->prepareAddress('Камызяк', 'Lenina 45', 'Sleva ot pomoiki');
+//            $this->getCdekPeriod(44);
         }
     }
 
@@ -171,30 +177,30 @@ class CDEKIntegration
      */
     private function getCdekPeriod($CdekCityCode)
     {
-        $CDEK_UserKey = "1030310ac8a91bc76db4e53e2f7b01e8";
-        $CDEK_UserPassword = "013fc3f5c1a2493786efe625416c58dc";
-//        try {
+        $CDEK_UserKey = "yy730tubinej2gmzmovzn48xz43vr5vl";
+        $CDEK_UserPassword = "qgsp3xueexi94k05mca1hshpyfwdlgon"; 
+        try {
             $calc = new CalculatePriceDeliveryCdek();
             $calc->setAuth($CDEK_UserKey, $CDEK_UserPassword);
             $calc->setSenderCityId(44);
             $calc->setReceiverCityId($CdekCityCode);
-//            $calc->addTariffPriority(234, 1);
-//            $calc->addTariffPriority(136, 2);
-            $calc->setTariffId(136);
+            $calc->addTariffPriority(234, 1);
+            $calc->addTariffPriority(136, 2);
+//            $calc->setTariffId(136);
             $calc->addGoodsItemBySize(1, 20, 15, 10);
 
-//            if ($calc->calculate() === true) {
+            if ($calc->calculate() === true) {
                 $res = $calc->getResult();
-                echo "<pre>";
-                var_dump($calc);
-                echo "</pre>";
-                exit;
-//                $periodMax = $res['result']['deliveryPeriodMax'];
+//                echo "<pre>";
+//                var_dump($res);
+//                echo "</pre>";
+//                exit;
+                $periodMax = $res['result']['deliveryPeriodMax'];
 //                $periodMin = $res['result']['deliveryPeriodMin'];
 //                echo '<br>Period ' . $periodMin . ' ' . $periodMax;
-//            }
-//        } catch (Exception $e) {
-//        }
+            }
+        } catch (Exception $e) {
+        }
         return $periodMax;
     }
 
@@ -535,7 +541,7 @@ class CDEKIntegration
      */
     private function getRegion($name = '')
     {
-        return $this->request('regions.json', array('name' => urlencode($name)));
+        return $this->request('regions.json', array('name' => $name));
     }
 
     /**
@@ -646,11 +652,12 @@ class CDEKIntegration
         $addressInfo = $this->parseAddress($address);
         $street = $addressInfo[0];
         $additional = $addressInfo[1];
-        return array(
+        $arr = array(
             'regionId' => $regionId,
             'street' => $street,
             'additional' => $additional . ($comment ? ' ( ' . $comment . ' )' : '')
         );
+        return $arr;
     }
 
     /**
@@ -819,12 +826,11 @@ class CDEKIntegration
         $data = array();
         //upal na PRK6 - check it В теле запроса не указан обязательный параметр.
         foreach ($outlets as $key => $outlet) {
-            echo PHP_EOL. "Gotovim punkt ".(string)$outlet['Code']. " in region " .(string)$outlet['RegionName'];
+            echo PHP_EOL . "Gotovim punkt " . (string)$outlet['Code'] . " in region " . (string)$outlet['RegionName'];
             ($address = $this->prepareAddress((string)$outlet['City'],
-                    (string)$outlet['Address'],
-                    (string)$outlet['AddressComment']));// $this->getDeliveryCost((string)$outlet['RegionName'])))
-            if ($outlet['CityCode']==0)
-            {
+                (string)$outlet['Address'],
+                (string)$outlet['AddressComment']));// $this->getDeliveryCost((string)$outlet['RegionName'])))
+            if ($outlet['CityCode'] == 0) {
                 continue;
             }
             /** @var Outlet $outlet */
@@ -840,8 +846,8 @@ class CDEKIntegration
                 'phones' => array('+7 (495) 009-04-05'),
                 'workingSchedule' => $this->prepareWorkingSchedule($outletArray['WorkTimeY']),
                 'deliveryRules' => array(array("cost" => 240,
-                    "minDeliveryDays" => $maxDeliveryDays+6,
-                    "maxDeliveryDays" => $maxDeliveryDays+8,
+                    "minDeliveryDays" => $maxDeliveryDays+3,
+                    "maxDeliveryDays" => $maxDeliveryDays+5,
                     "deliveryServiceId" => 51, //Сдэк
                     "priceFreePickup" => 3500))
             );
