@@ -113,7 +113,8 @@ do {
                     echo $exception->getMessage();
                 }
                 $orderMarketCdek = $resMarket->toArray();
-                $cdekOutletId = $orderMarketCdek['order']['delivery']['outletId'];
+                $d = $delivery->toArray();
+                $cdekOutletId = $d['data']['outletId'];
 
                 $resMarket = $clientMarket->request('GET', 'https://api.partner.market.yandex.ru/v2/campaigns/22787539/outlets/' . $cdekOutletId . '.json', [
                     'headers' => [
@@ -124,11 +125,9 @@ do {
                 ]);
                 $cdek_outlet_id = $resMarket->toArray();
                 $cdek_outlet_code = str_replace('CDEK-', '', $cdek_outlet_id['outlet']['shopOutletCode']);
-
             }
             //BEGIN CDEK BUILD
 
-            $customerName = $buyer->getLastName() . ' ' . $buyer->getFirstName();
             //begin of cdek order class
             if ($delivery->getType() == "PICKUP") {
                 $orderCdek = BaseTypes\Order::create([
