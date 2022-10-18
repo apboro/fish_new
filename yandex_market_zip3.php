@@ -274,7 +274,7 @@ class YandexMarket
                 167, 178, 179, 180, 181, 144990, 250883, 250885, 144990, 250886, 250887, 250888, 250889,
                 250890
             );
-             $suppliers_id_list = array(15, 17, 18, 64, 56, 28, 43);  //43 - икс ривер(лас), 18 - RS, 64 - bemal, 56- гретис, 26 - волжанка, 17 - гриффон, 25 - микадо, 15 - нормарк, 28 - земекс выбираем поставщиков
+             $suppliers_id_list = array(17, 18, 64, 28, 43);  //43 - икс ривер(лас), 18 - RS, 64 - bemal, 56- гретис, 26 - волжанка, 17 - гриффон, 25 - микадо, 15 - нормарк, 28 - земекс выбираем поставщиков
              if ((!in_array($product['products_id'], $ar)) and ($product['products_price']>2500)
               and (in_array($product['supplier_id'], $suppliers_id_list))
                and ($product['products_quantity'] > 100))
@@ -282,17 +282,8 @@ class YandexMarket
                  echo self::getOffer($product, $currencies, $clothes_cat, $param_names);
              }
             //включить в фид по айди без условий
-            $prods_to_feed = array(
-                250896,327109,39458, 12022, 16455, 327107, 35294, 254125, 254141, 32532,
-                9689,9693,                18092,                45097,45098,                45100,                56495,
-                56498,56499,                123422,                250316,
-                250842,250896,                250946,                252277,
-                253516,256970,                257064,305357, 250941,254538,19294,253527,16634,29560,
-                250946, 18036, 250942, 173437, 327108, 12884
-            );
-
-            if (in_array($product['products_id'], $prods_to_feed) and ($product['products_quantity'] > 0) 
-            and ($product['products_quantity'] < 1000)) {
+            $prods_to_feed = array(250896);
+            if (in_array($product['products_id'], $prods_to_feed))  {
                 echo self::getOffer($product, $currencies, $clothes_cat, $param_names);
             }
         }

@@ -304,10 +304,10 @@ class CalculatePriceDeliveryCdek {
             return false;
         }
         
-		//return (isset($response['result']) && (!empty($response['result']))) ? true : false;
-		//результат
-		//$result = ($this->getResponse());
-		//return $result;
+//		return (isset($response['result']) && (!empty($response['result']))) ? true : false;
+//		//результат
+//		$result = ($this->getResponse());
+//		return $result;
 	}
 	
 	/**
