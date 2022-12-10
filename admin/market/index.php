@@ -100,209 +100,211 @@ do {
              $buyerPhone=$orderBuyerInfo['result']['phone'];
 
 
-            if ($delivery->getType() == "PICKUP") {
-                try {
-                    $clientMarket = HttpClient::create(['http_version' => '2.0']);
-                    $resMarket = $clientMarket->request('GET', 'https://api.partner.market.yandex.ru/v2/campaigns/22787539/orders/' . $market_order->getId() . '.json', [
-                        'headers' => [
-                            'Content-Type' => 'application/json',
-                            'Authorization: OAuth oauth_token="AQAAAAABXSvwAAeYsDlscNzd10MlsMeftHYTUNc", oauth_client_id="9f011ee17c414b3194c8853266ba7d27"',
-                        ],
-                    ]);
-                } catch (RequestException $exception) {
-                    echo $exception->getMessage();
-                }
-                $orderMarketCdek = $resMarket->toArray();
-                $d = $delivery->toArray();
-                $cdekOutletId = $d['data']['outletId'];
+//            if ($delivery->getType() == "PICKUP") {
+//                try {
+//                    $clientMarket = HttpClient::create(['http_version' => '2.0']);
+//                    $resMarket = $clientMarket->request('GET', 'https://api.partner.market.yandex.ru/v2/campaigns/22787539/orders/' . $market_order->getId() . '.json', [
+//                        'headers' => [
+//                            'Content-Type' => 'application/json',
+//                            'Authorization: OAuth oauth_token="AQAAAAABXSvwAAeYsDlscNzd10MlsMeftHYTUNc", oauth_client_id="9f011ee17c414b3194c8853266ba7d27"',
+//                        ],
+//                    ]);
+//                } catch (RequestException $exception) {
+//                    echo $exception->getMessage();
+//                }
+//                $orderMarketCdek = $resMarket->toArray();
+//                $d = $order->getDelivery()->toArray();
+//                var_dump($d); exit;
+//                $cdekOutletId = $d['data']['outletId'];
+//
+//                $resMarket = $clientMarket->request('GET', 'https://api.partner.market.yandex.ru/v2/campaigns/22787539/outlets/' . $cdekOutletId . '.json', [
+//                    'headers' => [
+//                        'Content-Type' => 'application/json',
+//                        'Authorization: OAuth oauth_token="AQAAAAABXSvwAAeYsDlscNzd10MlsMeftHYTUNc", oauth_client_id="9f011ee17c414b3194c8853266ba7d27"',
+//                    ],
+//
+//                ]);
+//                $cdek_outlet_id = $resMarket->toArray();
+//                $cdek_outlet_code = str_replace('CDEK-', '', $cdek_outlet_id['outlet']['shopOutletCode']);
+//            }
 
-                $resMarket = $clientMarket->request('GET', 'https://api.partner.market.yandex.ru/v2/campaigns/22787539/outlets/' . $cdekOutletId . '.json', [
-                    'headers' => [
-                        'Content-Type' => 'application/json',
-                        'Authorization: OAuth oauth_token="AQAAAAABXSvwAAeYsDlscNzd10MlsMeftHYTUNc", oauth_client_id="9f011ee17c414b3194c8853266ba7d27"',
-                    ],
-
-                ]);
-                $cdek_outlet_id = $resMarket->toArray();
-                $cdek_outlet_code = str_replace('CDEK-', '', $cdek_outlet_id['outlet']['shopOutletCode']);
-            }
             //BEGIN CDEK BUILD
 
             //begin of cdek order class
-            if ($delivery->getType() == "PICKUP") {
-                $orderCdek = BaseTypes\Order::create([
-                    'shipment_point' => 'MSK647',
-                    'delivery_point' => $cdek_outlet_code,
-                    'number' => $market_order->getId(),
-                    'tariff_code' => '136',
-                    'recipient' => BaseTypes\Contact::create([
-                        'name' => $customerName,
-                        'phones' => [
-                            BaseTypes\Phone::create(['number' => $buyerPhone])
-                        ]
-                    ]),
-                    'packages' => [
-                        BaseTypes\Package::create([
-                            'number' => '1',
-                            'weight' => 1000,
-                            'length' => 10,
-                            'width' => 10,
-                            'height' => 10,
-                            'items' => [
-                                BaseTypes\Item::create([
-                                    'name' => $tovar->getOfferName(),
-                                    'ware_key' => $tovar->getOfferId(),
-                                    'payment' => BaseTypes\Money::create(['value' => $market_order->getPaymentType() == "POSTPAID" ? $market_order->getTotal()  : 0]),
-                                    //'payment' => BaseTypes\Money::create(['value' => 0]),
-                                    'cost' => $market_order->getPaymentType() == "POSTPAID" ? $market_order->getTotal()  : 0,
-                                    'weight' => 1000,
-                                    'amount' => 1,
-                                ]),
-                            ]
-                        ])
-                    ],
-                ]);
-            } else {
-                $orderCdek = BaseTypes\Order::create([
-                    'shipment_point' => 'MSK647',
-                    'number' => $market_order->getId(),
-                    'tariff_code' => '137',
-                    'recipient' => BaseTypes\Contact::create([
-                        'name' => $customerName,
-                        'phones' => [
-                            BaseTypes\Phone::create(['number' => $buyerPhone])
-                        ]
-                    ]),
-
-                    'to_location' => BaseTypes\Location::create([
-                        'code' => 44,
-                        'country_code' => 'ru',
-                        'address' => $address->getStreet() . ' ' . $address->getHouse() . ' ' . $address->getApartment()
-                    ]),
-
-                    'packages' => [
-                        BaseTypes\Package::create([
-                            'number' => '1',
-                            'weight' => 1000,
-                            'length' => 10,
-                            'width' => 10,
-                            'height' => 10,
-                            'items' => [
-                                BaseTypes\Item::create([
-                                    'name' => $tovar->getOfferName(),
-                                    'ware_key' => $tovar->getOfferId(),
-                                    'payment' => BaseTypes\Money::create(['value' => $market_order->getPaymentType() == "POSTPAID" ? $market_order->getTotal()  : 0]),
-                                    //'payment' => BaseTypes\Money::create(['value' => 0]),
-                                    'cost' => $market_order->getPaymentType() == "POSTPAID" ? $market_order->getTotal()  : 0,
-                                    'weight' => 1000,
-                                    'amount' => 1,
-                                ]),
-                            ]
-                        ])
-                    ],
-                ]);
-            }
+//            if ($delivery->getType() == "PICKUP") {
+//                $orderCdek = BaseTypes\Order::create([
+//                    'shipment_point' => 'MSK647',
+//                    'delivery_point' => $cdek_outlet_code,
+//                    'number' => $market_order->getId(),
+//                    'tariff_code' => '136',
+//                    'recipient' => BaseTypes\Contact::create([
+//                        'name' => $customerName,
+//                        'phones' => [
+//                            BaseTypes\Phone::create(['number' => $buyerPhone])
+//                        ]
+//                    ]),
+//                    'packages' => [
+//                        BaseTypes\Package::create([
+//                            'number' => '1',
+//                            'weight' => 1000,
+//                            'length' => 10,
+//                            'width' => 10,
+//                            'height' => 10,
+//                            'items' => [
+//                                BaseTypes\Item::create([
+//                                    'name' => $tovar->getOfferName(),
+//                                    'ware_key' => $tovar->getOfferId(),
+//                                    'payment' => BaseTypes\Money::create(['value' => $market_order->getPaymentType() == "POSTPAID" ? $market_order->getTotal()  : 0]),
+//                                    //'payment' => BaseTypes\Money::create(['value' => 0]),
+//                                    'cost' => $market_order->getPaymentType() == "POSTPAID" ? $market_order->getTotal()  : 0,
+//                                    'weight' => 1000,
+//                                    'amount' => 1,
+//                                ]),
+//                            ]
+//                        ])
+//                    ],
+//                ]);
+//            } else {
+//                $orderCdek = BaseTypes\Order::create([
+//                    'shipment_point' => 'MSK647',
+//                    'number' => $market_order->getId(),
+//                    'tariff_code' => '137',
+//                    'recipient' => BaseTypes\Contact::create([
+//                        'name' => $customerName,
+//                        'phones' => [
+//                            BaseTypes\Phone::create(['number' => $buyerPhone])
+//                        ]
+//                    ]),
+//
+//                    'to_location' => BaseTypes\Location::create([
+//                        'code' => 44,
+//                        'country_code' => 'ru',
+//                        'address' => $address->getStreet() . ' ' . $address->getHouse() . ' ' . $address->getApartment()
+//                    ]),
+//
+//                    'packages' => [
+//                        BaseTypes\Package::create([
+//                            'number' => '1',
+//                            'weight' => 1000,
+//                            'length' => 10,
+//                            'width' => 10,
+//                            'height' => 10,
+//                            'items' => [
+//                                BaseTypes\Item::create([
+//                                    'name' => $tovar->getOfferName(),
+//                                    'ware_key' => $tovar->getOfferId(),
+//                                    'payment' => BaseTypes\Money::create(['value' => $market_order->getPaymentType() == "POSTPAID" ? $market_order->getTotal()  : 0]),
+//                                    //'payment' => BaseTypes\Money::create(['value' => 0]),
+//                                    'cost' => $market_order->getPaymentType() == "POSTPAID" ? $market_order->getTotal()  : 0,
+//                                    'weight' => 1000,
+//                                    'amount' => 1,
+//                                ]),
+//                            ]
+//                        ])
+//                    ],
+//                ]);
+//            }
              //echo 'Result of adding order:'; PHP_EOL; var_dump($orderCdek); exit;
-            try {
-                echo "ADDING ORDER ". $market_order_number. PHP_EOL;
+//            try {
+//                echo "ADDING ORDER ". $market_order_number. PHP_EOL;
 //                print_r($orderCdek); exit;
-                $result = $cdek->orders()->add($orderCdek);
-
-                if ($result->isOk()) {
-                    //Запрос успешно выполнился
-                    $response_order = $cdek->formatResponse($result, BaseTypes\Order::class);
-                    // получаем UUID заказа и сохраняем его
-                    $uuid = $response_order->entity->uuid;
-                    //echo 'Result of adding order:'; PHP_EOL; var_dump($response_order); exit;
-                }
-                if ($result->hasErrors()) {
-                    // Обрабатываем ошибки
-                }
-            } catch (RequestException $exception) {
-                echo $exception->getMessage();
-            }
+//                $result = $cdek->orders()->add($orderCdek);
+//
+//                if ($result->isOk()) {
+//                    //Запрос успешно выполнился
+//                    $response_order = $cdek->formatResponse($result, BaseTypes\Order::class);
+//                    // получаем UUID заказа и сохраняем его
+//                    $uuid = $response_order->entity->uuid;
+//                    //echo 'Result of adding order:'; PHP_EOL; var_dump($response_order); exit;
+//                }
+//                if ($result->hasErrors()) {
+//                    // Обрабатываем ошибки
+//                }
+//            } catch (RequestException $exception) {
+//                echo $exception->getMessage();
+//            }
 
 
             //getting cdek token
-            $client = HttpClient::create(['http_version' => '2.0']);
-            $resCdekAuth = $client->request('POST', 'https://api.cdek.ru/v2/oauth/token?parameters', [
-                'headers' => [
-                    'Content-Type' => 'application/x-www-form-urlencoded',
-
-                ],
-                'body' => [
-                    'client_id' => 'yy730tubinej2gmzmovzn48xz43vr5vl',
-                    'client_secret' => 'qgsp3xueexi94k05mca1hshpyfwdlgon',
-                    'grant_type' => 'client_credentials',
-                ],
-            ]);
-            $token1 = $resCdekAuth->toArray()['access_token'];
-
-            $cdek_number = 0;
-            //getting cdek_number
-            do {
-                try {
-                    $i = 0;
-                    echo "GETTING CDEK NUMBER " . $i.PHP_EOL;
-                    sleep(5);
-                    $resCdekOrdInfo = $client->request('GET', 'https://api.cdek.ru/v2/orders?im_number=' . $market_order->getId(), [
-                        'headers' => [
-                            'Authorization: Bearer ' . $token1,
-                        ],
-                    ]);
-                    $nakl = $resCdekOrdInfo->toArray();
-                    $cdek_number = $nakl['entity']['cdek_number'];
-                    echo "CDEK NUMBER IS: ";
-                    print_r($cdek_number);
-                    echo PHP_EOL;
-                } catch (RequestException $exception) {
-                    echo $exception->getMessage();
-
-                }
-                $i++;
-            } while ($cdek_number == 0 and $i < 5);
-
-            //write track code in orders comments
-            $cdekSK = mysqli_real_escape_string($link, 'https://lk.cdek.ru/print/print-barcodes?orderId=' . $cdek_number . '&format=A4');
+//            $client = HttpClient::create(['http_version' => '2.0']);
+//            $resCdekAuth = $client->request('POST', 'https://api.cdek.ru/v2/oauth/token?parameters', [
+//                'headers' => [
+//                    'Content-Type' => 'application/x-www-form-urlencoded',
+//
+//                ],
+//                'body' => [
+//                    'client_id' => 'yy730tubinej2gmzmovzn48xz43vr5vl',
+//                    'client_secret' => 'qgsp3xueexi94k05mca1hshpyfwdlgon',
+//                    'grant_type' => 'client_credentials',
+//                ],
+//            ]);
+//            $token1 = $resCdekAuth->toArray()['access_token'];
+//
+//            $cdek_number = 0;
+//            //getting cdek_number
+//            do {
+//                try {
+//                    $i = 0;
+//                    echo "GETTING CDEK NUMBER " . $i.PHP_EOL;
+//                    sleep(5);
+//                    $resCdekOrdInfo = $client->request('GET', 'https://api.cdek.ru/v2/orders?im_number=' . $market_order->getId(), [
+//                        'headers' => [
+//                            'Authorization: Bearer ' . $token1,
+//                        ],
+//                    ]);
+//                    $nakl = $resCdekOrdInfo->toArray();
+//                    $cdek_number = $nakl['entity']['cdek_number'];
+//                    echo "CDEK NUMBER IS: ";
+//                    print_r($cdek_number);
+//                    echo PHP_EOL;
+//                } catch (RequestException $exception) {
+//                    echo $exception->getMessage();
+//
+//                }
+//                $i++;
+//            } while ($cdek_number == 0 and $i < 5);
+//
+//            //write track code in orders comments
+//            $cdekSK = mysqli_real_escape_string($link, 'https://lk.cdek.ru/print/print-barcodes?orderId=' . $cdek_number . '&format=A4');
 
 
 
             //request in market for add track code for cdek
-            try {
-                $clientMarket = HttpClient::create(['http_version' => '2.0']);
-                $resMarket = $clientMarket->request('POST', 'https://api.partner.market.yandex.ru/v2/campaigns/22787539/orders/' . $market_order->getId() . '/delivery/track.json', [
-                    'headers' => [
-                        'Content-Type' => 'application/json',
-                        'Authorization: OAuth oauth_token="AQAAAAABXSvwAAeYsDlscNzd10MlsMeftHYTUNc", oauth_client_id="9f011ee17c414b3194c8853266ba7d27"',
-                    ],
-                    'json' => ["trackCode" => $cdek_number, "deliveryServiceId" => 51],
-                ]);
-                echo "Track " . $cdek_number . " add to Market". PHP_EOL;
-            } catch (RequestException $exception) {
-                echo $exception->getMessage();
-            }
-
-            //sms postpaid order
-            if ($market_order->getPaymentType() == "POSTPAID") {
-                $clientSMS = HttpClient::create(['http_version' => '2.0']);
-
-                $resSMS = $clientSMS->request('POST', 'https://api.pushbullet.com/v2/texts', [
-                    'headers' => [
-                        'charset' => 'utf-8',
-                        'Content-Type' => 'application/json',
-                        'Access-Token' => 'o.JNYdz8BzzY9PrV40KVQGdfHeUx0IRBr3',
-                    ],
-                    'json' => [
-                        'data' =>
-                        [
-                            'addresses' => [$buyerPhone],
-                            'message' => 'Zakaz na Yandex.Market nomer ' . $market_order->getId() . ' oformlen i skoro budet otpravlen. Otsledit` posylku - cdek.ru/ru/tracking?order_id=' . $cdek_number,
-                            'target_device_iden' => 'ujCebCmJMyWsjBAT2Rkeey',
-                        ]
-                    ]
-                ]);
-                echo ' SMS -OK?200 =' . $statusCode = $resSMS->getStatusCode();
-            }
+//            try {
+//                $clientMarket = HttpClient::create(['http_version' => '2.0']);
+//                $resMarket = $clientMarket->request('POST', 'https://api.partner.market.yandex.ru/v2/campaigns/22787539/orders/' . $market_order->getId() . '/delivery/track.json', [
+//                    'headers' => [
+//                        'Content-Type' => 'application/json',
+//                        'Authorization: OAuth oauth_token="AQAAAAABXSvwAAeYsDlscNzd10MlsMeftHYTUNc", oauth_client_id="9f011ee17c414b3194c8853266ba7d27"',
+//                    ],
+//                    'json' => ["trackCode" => $cdek_number, "deliveryServiceId" => 51],
+//                ]);
+//                echo "Track " . $cdek_number . " add to Market". PHP_EOL;
+//            } catch (RequestException $exception) {
+//                echo $exception->getMessage();
+//            }
+//
+//            //sms postpaid order
+//            if ($market_order->getPaymentType() == "POSTPAID") {
+//                $clientSMS = HttpClient::create(['http_version' => '2.0']);
+//
+//                $resSMS = $clientSMS->request('POST', 'https://api.pushbullet.com/v2/texts', [
+//                    'headers' => [
+//                        'charset' => 'utf-8',
+//                        'Content-Type' => 'application/json',
+//                        'Access-Token' => 'o.JNYdz8BzzY9PrV40KVQGdfHeUx0IRBr3',
+//                    ],
+//                    'json' => [
+//                        'data' =>
+//                        [
+//                            'addresses' => [$buyerPhone],
+//                            'message' => 'Zakaz na Yandex.Market nomer ' . $market_order->getId() . ' oformlen i skoro budet otpravlen. Otsledit` posylku - cdek.ru/ru/tracking?order_id=' . $cdek_number,
+//                            'target_device_iden' => 'ujCebCmJMyWsjBAT2Rkeey',
+//                        ]
+//                    ]
+//                ]);
+//                echo ' SMS -OK?200 =' . $statusCode = $resSMS->getStatusCode();
+//            }
 
 
             //IMPORT IN YOURFISH
@@ -312,7 +314,7 @@ do {
                 insertOrderProducts($order->getId(), $tovar->getOfferName(), $tovar->getPrice(), $tovar->getCount(), $link);
                 insertTotal($order->getId(), $tovar->getPrice(), $delivery->getPrice(), $link);
                 insertComment($order->getId(), $order->getNotes(), $adres_dostavki, $link);
-                insertComment($market_order->getId(), $cdek_number . ' / Отслеживание - cdek.ru/ru/tracking?order_id=' . $cdek_number, $cdekSK, $link);
+//                insertComment($market_order->getId(), $cdek_number . ' / Отслеживание - cdek.ru/ru/tracking?order_id=' . $cdek_number, $cdekSK, $link);
             } catch (Exception $e) {
                 echo $e->getMessage();
             }

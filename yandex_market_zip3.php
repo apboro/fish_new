@@ -274,16 +274,25 @@ class YandexMarket
                 167, 178, 179, 180, 181, 144990, 250883, 250885, 144990, 250886, 250887, 250888, 250889,
                 250890
             );
-             $suppliers_id_list = array(17, 18, 64, 28, 43);  //43 - икс ривер(лас), 18 - RS, 64 - bemal, 56- гретис, 26 - волжанка, 17 - гриффон, 25 - микадо, 15 - нормарк, 28 - земекс выбираем поставщиков
-             if ((!in_array($product['products_id'], $ar)) and ($product['products_price']>2500)
-              and (in_array($product['supplier_id'], $suppliers_id_list))
-               and ($product['products_quantity'] > 100))
-                {
-                 echo self::getOffer($product, $currencies, $clothes_cat, $param_names);
-             }
+            $suppliers_id_list = array(17, 18, 64, 28, 43, 26);  //43 - икс ривер(лас), 18 - RS, 64 - bemal, 56- гретис, 26 - волжанка, 17 - гриффон, 25 - микадо, 15 - нормарк, 28 - земекс выбираем поставщиков, 79 - складик1
+            if ((!in_array($product['products_id'], $ar)) and ($product['products_price'] > 500)
+                and (in_array($product['supplier_id'], $suppliers_id_list))
+                and ($product['products_quantity'] > 100))
+            {
+                echo self::getOffer($product, $currencies, $clothes_cat, $param_names);
+            }
+            //включить складик1
+            if ((!in_array($product['products_id'], $ar)) and ($product['products_price'] > 500)
+                and ($product['supplier_id'] === 79)
+                and ($product['products_quantity'] > 0))
+            {
+                echo self::getOffer($product, $currencies, $clothes_cat, $param_names);
+            }
+
             //включить в фид по айди без условий
             $prods_to_feed = array(250896);
-            if (in_array($product['products_id'], $prods_to_feed))  {
+            if (in_array($product['products_id'], $prods_to_feed))
+            {
                 echo self::getOffer($product, $currencies, $clothes_cat, $param_names);
             }
         }
@@ -722,6 +731,7 @@ class YandexMarket
 		</yml_catalog>";
     }
 }
+
 /*require('includes/application_top.php');
 $exclude_cat = YandexMarket::getExcludeCatList();
 //    $include_cat = YandexMarket::getIncludeCatList();
