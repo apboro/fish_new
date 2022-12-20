@@ -206,8 +206,10 @@ class YandexMarket
             $query = "SELECT STRAIGHT_JOIN " .
                 "p.products_quantity_order_min, 
                 IF(s.status, s.specials_new_products_price, NULL) as specials_new_products_price, 
-                p.products_id,pd.products_name, p.products_to_xml, p.supplier_id, p.products_quantity,p.products_price,p.products_tax_class_id,pc.categories_id,p.manufacturers_id,
-          m.manufacturers_name,p.products_model,p.products_model_tag,pd.products_description, p.products_weight, p.supplier_id, 
+                p.products_id,pd.products_name, p.products_to_xml, p.supplier_id, p.products_quantity,
+                p.products_price,p.products_tax_class_id,pc.categories_id,p.manufacturers_id,
+          m.manufacturers_name,p.products_model,p.products_model_tag,pd.products_description, 
+          p.products_weight, p.supplier_id, 
           p.products_image,
           p.products_image_med,
           p.products_image_lrg,
@@ -227,7 +229,7 @@ class YandexMarket
     on p.products_quantity > 0
      and p.products_to_xml ='1'
       and p.products_status = '1'
-       and p.products_price > 1000
+       and p.products_price > 300
        and pc.products_id = p.products_id
         and pc.categories_id NOT IN (" . implode(',', $exclude_cat) . ")
             LEFT JOIN " . TABLE_PRODUCTS_DESCRIPTION . " AS pd ON pd.products_id = p.products_id
@@ -282,9 +284,8 @@ class YandexMarket
                 echo self::getOffer($product, $currencies, $clothes_cat, $param_names);
             }
             //включить складик1
-            if ((!in_array($product['products_id'], $ar)) and ($product['products_price'] > 500)
-                and ($product['supplier_id'] === 79)
-                and ($product['products_quantity'] > 0))
+            if ($product['supplier_id'] == 79)
+//            if ($product['products_model']='s-DSCRS07-S')
             {
                 echo self::getOffer($product, $currencies, $clothes_cat, $param_names);
             }
@@ -775,7 +776,9 @@ $cache_output = ob_get_contents();
 ob_end_clean();
 //Архивируем прайс-лист в zip и gzip
 file_put_contents(DIR_FS_CACHE . 'yandex_market_tmp3.xml', $cache_output);
-shell_exec('cd ' . DIR_FS_CACHE . ' && rm -f yandex_market3.zip && zip yandex_market3.zip yandex_market_tmp3.xml');
+shell_exec('cd ' . DIR_FS_CACHE . ' && rm -f yandex_market3.zip && zip yandex
+
+_market3.zip yandex_market_tmp3.xml');
 shell_exec('cd ' . DIR_FS_CACHE . ' && rm -f yandex_market3.gz && gzip -c yandex_market_tmp3.xml > yandex_market3.gz');
 
 //}
